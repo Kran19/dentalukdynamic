@@ -25,6 +25,7 @@
     
     <!-- Custom Style -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css?v=13') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css?v=1') }}">
 </head>
 <body>
 

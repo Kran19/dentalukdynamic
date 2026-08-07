@@ -67,13 +67,15 @@
                                 <div class="form-col form-col-name">
                                     <div class="form-group">
                                         <label class="form-label" for="dentistFirstName">First Name <span>*</span></label>
-                                        <input type="text" class="form-control-custom" id="dentistFirstName" name="dentistFirstName" value="{{ old('dentistFirstName') }}" placeholder="Enter first name" required>
+                                        <input type="text" class="form-control-custom" id="dentistFirstName" name="dentistFirstName" value="{{ old('dentistFirstName') }}" placeholder="Enter first name" required
+                                            oninput="this.value = this.value.replace(/[^a-zA-Z\s-]/g, '')">
                                     </div>
                                 </div>
                                 <div class="form-col form-col-name">
                                     <div class="form-group">
                                         <label class="form-label" for="dentistLastName">Last Name <span>*</span></label>
-                                        <input type="text" class="form-control-custom" id="dentistLastName" name="dentistLastName" value="{{ old('dentistLastName') }}" placeholder="Enter last name" required>
+                                        <input type="text" class="form-control-custom" id="dentistLastName" name="dentistLastName" value="{{ old('dentistLastName') }}" placeholder="Enter last name" required
+                                            oninput="this.value = this.value.replace(/[^a-zA-Z\s-]/g, '')">
                                     </div>
                                 </div>
                             </div>
@@ -87,7 +89,8 @@
                                 <div class="form-col">
                                     <div class="form-group">
                                         <label class="form-label" for="dentistPhone">Telephone <span>*</span></label>
-                                        <input type="tel" class="form-control-custom" id="dentistPhone" name="dentistPhone" value="{{ old('dentistPhone') }}" placeholder="Enter phone number" required>
+                                        <input type="tel" class="form-control-custom" id="dentistPhone" name="dentistPhone" value="{{ old('dentistPhone') }}" placeholder="Enter phone number" required
+                                            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,11)">
                                     </div>
                                 </div>
                             </div>
@@ -123,7 +126,8 @@
                                 <div class="form-col">
                                     <div class="form-group">
                                         <label class="form-label" for="practicePhone">Telephone Number <span>*</span></label>
-                                        <input type="tel" class="form-control-custom" id="practicePhone" name="practicePhone" value="{{ old('practicePhone') }}" placeholder="Enter practice phone" required>
+                                        <input type="tel" class="form-control-custom" id="practicePhone" name="practicePhone" value="{{ old('practicePhone') }}" placeholder="Enter practice phone" required
+                                            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,11)">
                                     </div>
                                 </div>
                                 <div class="form-col">
@@ -161,13 +165,15 @@
                                 <div class="form-col form-col-name">
                                     <div class="form-group">
                                         <label class="form-label" for="patientFirstName">First Name <span>*</span></label>
-                                        <input type="text" class="form-control-custom" id="patientFirstName" name="patientFirstName" value="{{ old('patientFirstName') }}" placeholder="Enter first name" required>
+                                        <input type="text" class="form-control-custom" id="patientFirstName" name="patientFirstName" value="{{ old('patientFirstName') }}" placeholder="Enter first name" required
+                                            oninput="this.value = this.value.replace(/[^a-zA-Z\s-]/g, '')">
                                     </div>
                                 </div>
                                 <div class="form-col form-col-name">
                                     <div class="form-group">
                                         <label class="form-label" for="patientLastName">Last Name <span>*</span></label>
-                                        <input type="text" class="form-control-custom" id="patientLastName" name="patientLastName" value="{{ old('patientLastName') }}" placeholder="Enter last name" required>
+                                        <input type="text" class="form-control-custom" id="patientLastName" name="patientLastName" value="{{ old('patientLastName') }}" placeholder="Enter last name" required
+                                            oninput="this.value = this.value.replace(/[^a-zA-Z\s-]/g, '')">
                                     </div>
                                 </div>
                             </div>
@@ -209,7 +215,8 @@
                                 <div class="form-col">
                                     <div class="form-group">
                                         <label class="form-label" for="patientPhone">Telephone Number <span>*</span></label>
-                                        <input type="tel" class="form-control-custom" id="patientPhone" name="patientPhone" value="{{ old('patientPhone') }}" placeholder="Enter patient phone" required>
+                                        <input type="tel" class="form-control-custom" id="patientPhone" name="patientPhone" value="{{ old('patientPhone') }}" placeholder="Enter patient phone" required
+                                            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,11)">
                                     </div>
                                 </div>
                                 <div class="form-col">

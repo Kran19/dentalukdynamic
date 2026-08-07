@@ -98,6 +98,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/pages', [PageAdminController::class, 'index'])->name('pages.index');
         Route::get('/pages/sections/{section}/edit', [PageAdminController::class, 'editSection'])->name('pages.sections.edit');
         Route::put('/pages/sections/{section}', [PageAdminController::class, 'updateSection'])->name('pages.sections.update');
+        Route::delete('/pages/sections/{section}', [PageAdminController::class, 'destroySection'])->name('pages.sections.destroy');
 
         // Treatments CMS
         Route::get('/treatments', [TreatmentAdminController::class, 'index'])->name('treatments.index');

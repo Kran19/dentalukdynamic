@@ -138,8 +138,8 @@ class TeamMemberSeeder extends Seeder
                 'name' => 'Samet Karahan',
                 'role' => 'Trainee Dental Nurse',
                 'gdc_number' => null,
-                'image_path' => 'assets/images/team/michael.png',
-                'bio' => "Samet Karahan is a Trainee Dental Nurse, focused on clinical preparation, surgery hygiene, and ensuring patients feel relaxed.",
+                'image_path' => 'assets/images/team/samet .jpeg',
+                'bio' => "Samet is a Trainee Dental Nurse at ICON Dental Wembley. He is a qualified dentist, having completed his DDS degree in Turkey, and recently completed his MSc in Dental Public Health at King’s College London. He is currently gaining experience within the UK dental system while preparing for the GDC Overseas Registration Exam. With a strong interest in preventive dentistry and improving patients’ oral health, Samet is passionate about providing compassionate, patient-centred care and continuing his professional development.",
                 'category' => 'Nurses',
                 'sort_order' => 14,
             ],
@@ -147,9 +147,9 @@ class TeamMemberSeeder extends Seeder
             // Front of House
             [
                 'name' => 'Hina Farooq',
-                'role' => 'Receptionist',
+                'role' => 'Front of House',
                 'gdc_number' => null,
-                'image_path' => 'assets/images/team/sarah.png',
+                'image_path' => null,
                 'bio' => "Our patient care coordinators ensure a seamless journey from booking your consultation to completing your custom treatment plan.",
                 'category' => 'FrontOfHouse',
                 'sort_order' => 15,

@@ -32,6 +32,7 @@
             min-height: 100vh;
             display: flex;
             margin: 0;
+            overflow-x: hidden;
         }
 
         /* Sidebar Styles */
@@ -70,6 +71,11 @@
             padding: 16px 12px;
             overflow-y: auto;
             flex-grow: 1;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .cms-nav::-webkit-scrollbar {
+            display: none;
         }
 
         .cms-nav-group-title {
@@ -121,6 +127,7 @@
             flex-direction: column;
             min-height: 100vh;
             width: calc(100% - var(--cms-sidebar-width));
+            min-width: 0;
         }
 
         .cms-header {
@@ -194,6 +201,11 @@
         .table-cms tbody tr:hover {
             background: rgba(177, 152, 111, 0.05);
         }
+        .table-cms code {
+            color: #555;
+            background: transparent;
+            font-size: 13px;
+        }
 
         /* Buttons */
         .btn-gold {
@@ -210,9 +222,113 @@
             color: #111a10;
             transform: translateY(-2px);
         }
+
+        /* Modal Inputs Global Styling */
+        .modal-content .form-control {
+            color: #e2e8f0 !important;
+        }
+        .modal-content .form-control::placeholder {
+            color: rgba(255,255,255,0.4) !important;
+        }
+        .modal-content .form-control:focus {
+            background: rgba(255,255,255,0.1) !important;
+            color: #ffffff !important;
+            box-shadow: 0 0 0 3px rgba(177, 152, 111, 0.25) !important;
+            border-color: var(--cms-gold) !important;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 991.98px) {
+            .cms-sidebar {
+                transform: translateX(-100%);
+            }
+            .cms-sidebar.show {
+                transform: translateX(0);
+            }
+            .cms-main {
+                margin-left: 0;
+                width: 100%;
+            }
+            .sidebar-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.6);
+                z-index: 1025;
+                backdrop-filter: blur(3px);
+            }
+            .sidebar-overlay.show {
+                display: block;
+            }
+            .mobile-menu-btn {
+                display: block !important;
+            }
+            .cms-header {
+                padding: 0 15px;
+            }
+            .cms-body {
+                padding: 15px;
+            }
+            
+            /* Responsive Table Cards */
+            .table-mobile-cards, .table-mobile-cards tbody, .table-mobile-cards tr, .table-mobile-cards td {
+                display: block;
+                width: 100%;
+            }
+            .table-mobile-cards thead {
+                display: none;
+            }
+            .table-mobile-cards tr {
+                margin-bottom: 16px;
+                background: #e2e8f0;
+                border: 1px solid rgba(177, 152, 111, 0.4);
+                border-radius: 12px;
+                overflow: visible;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .table-mobile-cards td {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+                padding: 12px 16px !important;
+                text-align: right;
+                background: transparent !important;
+                color: #111 !important;
+            }
+            .table-mobile-cards td:last-child {
+                border-bottom: none;
+            }
+            .table-mobile-cards td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: #856d45;
+                text-transform: uppercase;
+                font-size: 11.5px;
+                letter-spacing: 0.5px;
+                text-align: left;
+                padding-right: 15px;
+                flex-shrink: 0;
+            }
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--cms-gold);
+            font-size: 22px;
+            padding: 0;
+            margin-right: 15px;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Mobile Sidebar Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <!-- Sidebar -->
     <aside class="cms-sidebar">
@@ -286,12 +402,15 @@
     <div class="cms-main">
         <!-- Top Header -->
         <header class="cms-header">
-            <div>
-                <h5 class="mb-0 text-gold font-serif fw-bold" style="color: #d6c09b;">{{ $headerTitle }}</h5>
+            <div class="d-flex align-items-center">
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <h5 class="mb-0 text-gold font-serif fw-bold" style="color: #d6c09b; font-size: 1.1rem;">{{ $headerTitle }}</h5>
             </div>
             
-            <div class="d-flex align-items-center gap-3">
-                <a href="{{ route('home') }}" target="_blank" class="btn btn-outline-warning btn-sm rounded-pill px-3">
+            <div class="d-flex align-items-center gap-2 gap-sm-3">
+                <a href="{{ route('home') }}" target="_blank" class="btn btn-outline-warning btn-sm rounded-pill px-3 d-none d-md-inline-flex align-items-center">
                     <i class="fa-solid fa-globe me-1"></i> View Live Site
                 </a>
 
@@ -336,5 +455,22 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebar = document.querySelector('.cms-sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            const menuBtn = document.getElementById('mobileMenuBtn');
+
+            function toggleSidebar() {
+                sidebar.classList.toggle('show');
+                overlay.classList.toggle('show');
+            }
+
+            if (menuBtn && overlay && sidebar) {
+                menuBtn.addEventListener('click', toggleSidebar);
+                overlay.addEventListener('click', toggleSidebar);
+            }
+        });
+    </script>
 </body>
 </html>

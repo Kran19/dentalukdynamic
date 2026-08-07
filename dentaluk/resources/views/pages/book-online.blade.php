@@ -1,4 +1,31 @@
 <x-app-layout title="Icon Dental- Wembley | Book Online" description="Fill in our quick online booking form to request an appointment with our expert dental team.">
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <style>
+        .flatpickr-calendar {
+            font-family: 'Inter', sans-serif;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 1px solid rgba(177, 152, 111, 0.3);
+            padding: 5px;
+        }
+        .flatpickr-day.selected {
+            background: #b1986f !important;
+            border-color: #b1986f !important;
+            font-weight: 600;
+        }
+        .flatpickr-day:hover {
+            background: rgba(177, 152, 111, 0.1) !important;
+            color: #111 !important;
+        }
+        .flatpickr-months .flatpickr-month {
+            color: #465c49;
+            fill: #465c49;
+        }
+        .flatpickr-current-month .flatpickr-monthDropdown-months {
+            font-weight: 700;
+        }
+    </style>
     <section class="book-hero">
         <div class="container custom-container">
             
@@ -98,7 +125,7 @@
                                 <div class="form-col">
                                     <div class="form-group">
                                         <label class="form-label">Full Name <span>*</span></label>
-                                        <input type="text" name="full_name" class="form-control-custom @error('full_name') input-error @enderror" value="{{ old('full_name') }}" placeholder="Enter your full name" required>
+                                        <input type="text" name="full_name" class="form-control-custom @error('full_name') input-error @enderror" value="{{ old('full_name') }}" placeholder="Enter your full name" pattern="[a-zA-Z\s\-\']+" title="Only letters, spaces, hyphens, and apostrophes are allowed" oninput="this.value = this.value.replace(/[^a-zA-Z\s\-\']/g, '')" required>
                                     </div>
                                 </div>
                                 <div class="form-col">
@@ -114,13 +141,14 @@
                                 <div class="form-col">
                                     <div class="form-group">
                                         <label class="form-label">Phone Number <span>*</span></label>
-                                        <input type="tel" name="phone" class="form-control-custom @error('phone') input-error @enderror" value="{{ old('phone') }}" placeholder="Enter your phone number" required>
+                                        <input type="tel" name="phone" class="form-control-custom @error('phone') input-error @enderror" value="{{ old('phone') }}" placeholder="Enter your phone number" required
+                                            oninput="this.value = this.value.replace(/[^0-9]/g, '').slice(0,11)">
                                     </div>
                                 </div>
                                 <div class="form-col">
                                     <div class="form-group">
                                         <label class="form-label">Preferred Date <span>*</span></label>
-                                        <input type="date" name="preferred_date" class="form-control-custom @error('preferred_date') input-error @enderror" value="{{ old('preferred_date') }}" required>
+                                        <input type="text" id="premiumDatePicker" name="preferred_date" class="form-control-custom @error('preferred_date') input-error @enderror" value="{{ old('preferred_date') }}" required placeholder="Select a date" style="background-color: #fff; cursor: pointer;">
                                     </div>
                                 </div>
                             </div>
@@ -170,4 +198,18 @@
             </div>
         </div>
     </section>
+
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            flatpickr("#premiumDatePicker", {
+                minDate: "today",
+                dateFormat: "Y-m-d",
+                altInput: true,
+                altFormat: "F j, Y",
+                disableMobile: "true"
+            });
+        });
+    </script>
 </x-app-layout>

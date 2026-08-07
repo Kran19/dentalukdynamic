@@ -7,7 +7,7 @@
                     <span class="text-white-50 small text-uppercase fw-bold">Pending Bookings</span>
                     <h2 class="text-warning font-serif display-6 fw-bold mb-0 mt-1">{{ $pendingAppointmentsCount }}</h2>
                 </div>
-                <div class="bg-warning bg-opacity-10 text-warning rounded-circle p-3 fs-3">
+                <div class="bg-warning bg-opacity-10 text-warning rounded-circle d-flex align-items-center justify-content-center fs-3" style="width: 55px; height: 55px;">
                     <i class="fa-regular fa-calendar-check"></i>
                 </div>
             </div>
@@ -19,7 +19,7 @@
                     <span class="text-white-50 small text-uppercase fw-bold">Pending Referrals</span>
                     <h2 class="text-info font-serif display-6 fw-bold mb-0 mt-1">{{ $pendingReferralsCount }}</h2>
                 </div>
-                <div class="bg-info bg-opacity-10 text-info rounded-circle p-3 fs-3">
+                <div class="bg-info bg-opacity-10 text-info rounded-circle d-flex align-items-center justify-content-center fs-3" style="width: 55px; height: 55px;">
                     <i class="fa-solid fa-file-medical"></i>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                     <span class="text-white-50 small text-uppercase fw-bold">Total Team Staff</span>
                     <h2 class="text-light font-serif display-6 fw-bold mb-0 mt-1">{{ \App\Models\TeamMember::count() }}</h2>
                 </div>
-                <div class="bg-secondary bg-opacity-25 text-light rounded-circle p-3 fs-3">
+                <div class="bg-secondary bg-opacity-25 text-light rounded-circle d-flex align-items-center justify-content-center fs-3" style="width: 55px; height: 55px;">
                     <i class="fa-solid fa-user-doctor"></i>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <span class="text-white-50 small text-uppercase fw-bold">System Status</span>
                     <h2 class="text-success font-serif h4 fw-bold mb-0 mt-1"><i class="fa-solid fa-circle me-1 fs-6"></i> Live</h2>
                 </div>
-                <div class="bg-success bg-opacity-10 text-success rounded-circle p-3 fs-3">
+                <div class="bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center fs-3" style="width: 55px; height: 55px;">
                     <i class="fa-solid fa-shield-halved"></i>
                 </div>
             </div>
@@ -58,7 +58,7 @@
         </div>
         <div class="cms-card-body p-0">
             <div class="table-responsive">
-                <table class="table table-cms">
+                <table class="table table-cms table-mobile-cards">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -74,14 +74,14 @@
                     <tbody>
                         @forelse ($recentAppointments as $apt)
                             <tr>
-                                <td>#{{ $apt->id }}</td>
-                                <td class="fw-bold text-warning">{{ $apt->full_name }}</td>
-                                <td>{{ $apt->email }}</td>
-                                <td>{{ $apt->phone }}</td>
-                                <td>{{ $apt->preferred_date->format('d M Y') }}</td>
-                                <td><span class="badge bg-info text-dark">{{ ucfirst($apt->preferred_time) }}</span></td>
-                                <td>{{ ucfirst($apt->visit_reason) }}</td>
-                                <td><span class="badge bg-warning text-dark">{{ ucfirst($apt->status) }}</span></td>
+                                <td data-label="ID">#{{ $apt->id }}</td>
+                                <td data-label="Patient Name">{{ $apt->full_name }}</td>
+                                <td data-label="Email">{{ $apt->email }}</td>
+                                <td data-label="Phone">{{ $apt->phone }}</td>
+                                <td data-label="Preferred Date">{{ $apt->preferred_date->format('d M Y') }}</td>
+                                <td data-label="Time Slot"><span class="badge bg-info text-dark">{{ ucfirst($apt->preferred_time) }}</span></td>
+                                <td data-label="Reason">{{ ucfirst($apt->visit_reason) }}</td>
+                                <td data-label="Status"><span class="badge bg-warning text-dark">{{ ucfirst($apt->status) }}</span></td>
                             </tr>
                         @empty
                             <tr>
@@ -102,7 +102,7 @@
         </div>
         <div class="cms-card-body p-0">
             <div class="table-responsive">
-                <table class="table table-cms">
+                <table class="table table-cms table-mobile-cards">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -118,24 +118,24 @@
                     <tbody>
                         @forelse ($recentReferrals as $ref)
                             <tr>
-                                <td>#{{ $ref->id }}</td>
-                                <td class="fw-bold text-warning">{{ $ref->dentist_title }} {{ $ref->dentist_first_name }} {{ $ref->dentist_last_name }}</td>
-                                <td>{{ $ref->practice_name }} ({{ $ref->practice_postcode }})</td>
-                                <td>{{ $ref->patient_title }} {{ $ref->patient_first_name }} {{ $ref->patient_last_name }}</td>
-                                <td>{{ $ref->patient_phone }}</td>
-                                <td>
+                                <td data-label="ID">#{{ $ref->id }}</td>
+                                <td data-label="Referring Dentist">{{ $ref->dentist_title }} {{ $ref->dentist_first_name }} {{ $ref->dentist_last_name }}</td>
+                                <td data-label="Practice">{{ $ref->practice_name }} ({{ $ref->practice_postcode }})</td>
+                                <td data-label="Patient Name">{{ $ref->patient_title }} {{ $ref->patient_first_name }} {{ $ref->patient_last_name }}</td>
+                                <td data-label="Patient Phone">{{ $ref->patient_phone }}</td>
+                                <td data-label="Treatments">
                                     @if(is_array($ref->treatments_required))
                                         @foreach($ref->treatments_required as $tx)
                                             <span class="badge bg-secondary me-1">{{ $tx }}</span>
                                         @endforeach
                                     @endif
                                 </td>
-                                <td>
+                                <td data-label="Type">
                                     <span class="badge {{ $ref->referral_type == 'Urgent' ? 'bg-danger' : 'bg-primary' }}">
                                         {{ $ref->referral_type }}
                                     </span>
                                 </td>
-                                <td><span class="badge bg-warning text-dark">{{ ucfirst($ref->status) }}</span></td>
+                                <td data-label="Status"><span class="badge bg-warning text-dark">{{ ucfirst($ref->status) }}</span></td>
                             </tr>
                         @empty
                             <tr>

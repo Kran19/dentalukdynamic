@@ -20,12 +20,12 @@
                 <!-- LEFT SIDE: Masonry Image Grid -->
                 <div class="hero-masonry">
                     <div class="masonry-col">
-                        <img src="{{ asset('assets/images/clinic room.png') }}" class="masonry-item-1" alt="Smiling Patient">
-                        <img src="{{ asset('assets/images/team.png') }}" class="masonry-item-3" alt="Clear Aligners Patient">
+                        <img src="{{ asset('assets/images/kishan seth.jpeg') }}" class="masonry-item-1" alt="Smiling Patient">
+                        <img src="{{ asset('assets/images/Examination.png') }}" class="masonry-item-3" alt="Clear Aligners Patient" style="height: auto;">
                     </div>
                     <div class="masonry-col">
                         <img src="{{ asset('assets/images/clinic reception waiting area.png') }}" class="masonry-item-2" alt="Clinic Reception">
-                        <img src="{{ asset('assets/images/clinic room 2.png') }}" class="masonry-item-4" alt="Healthy Smile">
+                        <img src="{{ asset('assets/images/clinic room 2.png') }}" class="masonry-item-4" alt="Healthy Smile" style="height: 361px;">
                     </div>
                 </div>
 
@@ -247,7 +247,7 @@
                             <p>{{ $emergencySec->content['emergency_desc'] ?? 'Dental emergencies can happen at any time. We provide same-day emergency appointments whenever possible for:' }}</p>
                             
                             @if (isset($emergencySec->content['emergency_badges']))
-                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
                                     @foreach ($emergencySec->content['emergency_badges'] as $badge)
                                         <span class="emergency-badge">{{ $badge }}</span>
                                     @endforeach

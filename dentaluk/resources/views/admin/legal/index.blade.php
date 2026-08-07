@@ -9,7 +9,7 @@
     <div class="cms-card">
         <div class="cms-card-body p-0">
             <div class="table-responsive">
-                <table class="table table-cms">
+                <table class="table table-cms table-mobile-cards">
                     <thead>
                         <tr>
                             <th>Policy Title</th>
@@ -22,22 +22,24 @@
                     <tbody>
                         @forelse ($pages as $p)
                             <tr>
-                                <td class="fw-bold text-warning">{{ $p->title }}</td>
-                                <td><code>/{{ $p->slug }}</code></td>
-                                <td><span class="badge {{ $p->is_published ? 'bg-success' : 'bg-secondary' }}">{{ $p->is_published ? 'Published' : 'Draft' }}</span></td>
-                                <td>{{ $p->updated_at->format('d M Y, H:i') }}</td>
-                                <td class="text-end">
-                                    <a href="{{ route('legal.show', $p->slug) }}" target="_blank" class="btn btn-outline-info btn-sm me-1">
-                                        <i class="fa-solid fa-eye"></i> View Live
-                                    </a>
-                                    <a href="{{ route('admin.legal.edit', $p) }}" class="btn btn-gold btn-sm">
-                                        <i class="fa-solid fa-pen-to-square me-1"></i> Edit Policy
-                                    </a>
+                                <td data-label="Policy Title" class="fw-bold" style="color: #111;">{{ $p->title }}</td>
+                                <td data-label="Clean URL"><code style="color: #b1986f;">/{{ $p->slug }}</code></td>
+                                <td data-label="Status"><span class="badge {{ $p->is_published ? 'bg-success' : 'bg-secondary' }}">{{ $p->is_published ? 'Published' : 'Draft' }}</span></td>
+                                <td data-label="Last Updated" style="color: #333;">{{ $p->updated_at->format('d M Y, H:i') }}</td>
+                                <td data-label="Actions" class="text-end">
+                                    <div class="d-flex gap-2 justify-content-end">
+                                        <a href="{{ route('legal.show', $p->slug) }}" target="_blank" class="btn btn-outline-light text-secondary border-secondary d-inline-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0; border-radius: 8px;" title="View Live">
+                                            <i class="fa-solid fa-eye"></i>
+                                        </a>
+                                        <a href="{{ route('admin.legal.edit', $p) }}" class="btn btn-outline-light text-secondary border-secondary d-inline-flex align-items-center justify-content-center" style="width: 36px; height: 36px; padding: 0; border-radius: 8px;" title="Edit Policy">
+                                            <i class="fa-solid fa-pen-to-square"></i>
+                                        </a>
+                                    </div>
                                 </td>
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="5" class="text-center text-white-50 py-4">No legal policy pages found.</td>
+                                <td colspan="5" class="text-center text-secondary py-4" style="color: #6c757d !important;">No legal policy pages found.</td>
                             </tr>
                         @endforelse
                     </tbody>

@@ -19,8 +19,8 @@ class FeeAdminController extends Controller
             $query->where('treatment_item', 'like', "%{$search}%");
         }
 
-        $feeItems = $query->orderBy('sort_order')->get();
-        return view('admin.fees.index', compact('feeItems'));
+        $fees = $query->orderBy('sort_order')->get();
+        return view('admin.fees.index', compact('fees'));
     }
 
     public function store(Request $request): RedirectResponse

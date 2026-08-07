@@ -1,0 +1,170 @@
+/* 
+    Responsive Overrides for Dental UK
+    Ensures all custom grid layouts and fixed paddings adapt to smaller screens.
+*/
+
+/* --- LARGE SCREENS (Laptops/Desktops max-width: 1199px) --- */
+@media (max-width: 1199px) {
+    .custom-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+/* --- TABLETS & SMALL LAPTOPS (max-width: 991px) --- */
+@media (max-width: 991px) {
+    .about-feature-grid, 
+    .values-grid,
+    .hero-features,
+    .stats-card,
+    .team-grid,
+    .services-grid,
+    .treatments-grid,
+    .smile-gallery-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    h1, .hero-title {
+        font-size: 2.5rem !important;
+    }
+    h2, .section-heading, .about-title {
+        font-size: 2rem !important;
+    }
+    
+    section {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+
+    .cta-banner,
+    .hero-banner {
+        flex-direction: column !important;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    .cta-left, .cta-right {
+        width: 100% !important;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mega-menu {
+        position: static !important;
+        display: none;
+        width: 100% !important;
+        box-shadow: none !important;
+        padding: 1rem !important;
+    }
+    .nav-item:hover .mega-menu {
+        display: block;
+    }
+    .mega-menu .row > div {
+        margin-bottom: 1rem;
+    }
+}
+
+/* --- LARGE PHONES & SMALL TABLETS (max-width: 767px) --- */
+@media (max-width: 767px) {
+    .about-feature-grid, 
+    .values-grid,
+    .hero-features,
+    .stats-card,
+    .team-grid,
+    .services-grid,
+    .treatments-grid,
+    .footer-grid,
+    .smile-gallery-grid,
+    .hero-grid-alternative,
+    .hero-masonry {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .about-image img,
+    .img-fluid,
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero-image-wrapper img {
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+
+    .custom-container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    section {
+        padding: 2.5rem 0 !important;
+    }
+
+    h1, .hero-title {
+        font-size: 2.2rem !important;
+    }
+    h2, .section-heading, .about-title {
+        font-size: 1.8rem !important;
+        line-height: 1.3 !important;
+    }
+    h3, .feature-title, .value-title {
+        font-size: 1.4rem !important;
+    }
+
+    .mega-menu {
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        display: none; 
+    }
+    .nav-item.show .mega-menu {
+        display: block;
+    }
+
+    /* Fix potential Bootstrap row issues in custom structures */
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .col-lg-6, .col-md-6 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        margin-bottom: 1.5rem;
+    }
+    
+    .pe-lg-5 {
+        padding-right: 0 !important;
+    }
+}
+
+/* --- SMALL PHONES (max-width: 575px) --- */
+@media (max-width: 575px) {
+    h1, .hero-title {
+        font-size: 1.8rem !important;
+    }
+    h2, .section-heading, .about-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .breadcrumb-nav {
+        font-size: 0.8rem;
+    }
+    
+    .btn-primary-custom, 
+    .btn-secondary-custom {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        padding: 0.8rem 1rem !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

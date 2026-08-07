@@ -48,7 +48,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image-wrapper">
-                        <img src="{{ asset('assets/images/reception.png') }}" alt="Luxury Dental Clinic Reception">
+                        <img src="{{ asset('assets/images/chatting .png') }}" alt="Luxury Dental Clinic Reception">
                     </div>
                 </div>
             </div>

@@ -12,7 +12,7 @@ class AppointmentAdminController extends Controller
 {
     public function index(): View
     {
-        $appointments = Appointment::latest()->paginate(15);
+        $appointments = Appointment::orderBy('id', 'asc')->paginate(15);
         return view('admin.appointments.index', compact('appointments'));
     }
 

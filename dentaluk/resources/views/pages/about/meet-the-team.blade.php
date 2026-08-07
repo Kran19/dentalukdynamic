@@ -206,12 +206,19 @@
                                  data-name="{{ $member->name }}" 
                                  data-role="{{ $member->role }}" 
                                  data-gdc="{{ $member->gdc_number }}" 
-                                 data-image="{{ asset($member->image_path) }}" 
+                                 data-image="{{ empty($member->image_path) ? 'none' : asset($member->image_path) }}" 
                                  data-bio="{{ $member->bio }}">
-                                <div class="team-card-img-wrapper">
-                                    <img src="{{ asset($member->image_path) }}" 
-                                         onerror="this.src='{{ asset('assets/images/team/michael.png') }}'" 
-                                         alt="{{ $member->name }}" class="team-card-img">
+                                <div class="team-card-img-wrapper" style="position: relative;">
+                                    @if(empty($member->image_path))
+                                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-45deg); z-index: 10; color: #000; font-weight: 900; font-size: 44px; letter-spacing: 2px; text-transform: uppercase; white-space: nowrap; text-shadow: 2px 2px 10px rgba(255,255,255,0.8);">Coming Soon</div>
+                                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(73, 87, 70, 0.2);">
+                                            <i class="fa-solid fa-user" style="font-size: 60px; color: rgba(177, 152, 111, 0.15);"></i>
+                                        </div>
+                                    @else
+                                        <img src="{{ asset($member->image_path) }}" 
+                                             onerror="this.src='{{ asset('assets/images/team/michael.png') }}'" 
+                                             alt="{{ $member->name }}" class="team-card-img">
+                                    @endif
                                 </div>
                                 <div class="team-card-content">
                                     <h3 class="team-name">{{ $member->name }}</h3>
@@ -300,7 +307,13 @@
                 }
 
                 modalBio.textContent = bio || "A dedicated member of our team, committed to providing exceptional care and helping you achieve a healthy, confident smile.";
-                modalImg.src = imgPath;
+                const imgContainer = document.querySelector('.team-modal-image-container');
+                if (imgPath === 'none') {
+                    imgContainer.style.display = 'none';
+                } else {
+                    imgContainer.style.display = 'block';
+                    modalImg.src = imgPath;
+                }
 
                 modal.classList.add('active');
             });

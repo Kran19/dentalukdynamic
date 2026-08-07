@@ -22,7 +22,7 @@ class FeeItemSeeder extends Seeder
             ['treatment_item' => 'Gumshields', 'nhs_fee' => 'N/A', 'private_fee' => '£120', 'denplan_fee' => 'To Be Started', 'sort_order' => 10],
             ['treatment_item' => 'Dentures – per arch', 'nhs_fee' => 'NHS Fees Apply', 'private_fee' => 'from £800', 'denplan_fee' => 'To Be Started', 'sort_order' => 11],
             ['treatment_item' => 'Implant', 'nhs_fee' => 'N/A', 'private_fee' => 'from £2000**', 'denplan_fee' => 'To Be Started', 'sort_order' => 12],
-            ['treatment_item' => 'Hygienist Consultation', 'nhs_fee' => 'N/A', 'private_fee' => '£70', 'denplan_fee' => 'To Be Started', 'sort_order' => 13],
+            ['treatment_item' => 'Hygienist Consultation', 'nhs_fee' => 'N/A', 'private_fee' => '£80', 'denplan_fee' => 'To Be Started', 'sort_order' => 13],
         ];
 
         foreach ($fees as $fee) {

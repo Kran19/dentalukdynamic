@@ -11,8 +11,8 @@ class DashboardController extends Controller
 {
     public function index(): View
     {
-        $recentAppointments = Appointment::latest()->take(10)->get();
-        $recentReferrals = Referral::latest()->take(10)->get();
+        $recentAppointments = Appointment::oldest()->take(10)->get();
+        $recentReferrals = Referral::oldest()->take(10)->get();
         $pendingAppointmentsCount = Appointment::where('status', 'pending')->count();
         $pendingReferralsCount = Referral::where('status', 'pending')->count();
 

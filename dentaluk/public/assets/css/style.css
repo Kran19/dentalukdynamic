@@ -6034,7 +6034,7 @@
 
         /* Welcome Section */
         .welcome-title { font-size: 48px; font-weight: 600; margin-bottom: 24px; line-height: 1.2; }
-        .welcome-desc { font-size: 16px; line-height: 1.7; margin-bottom: 32px; }
+        .welcome-desc { font-size: 16px; line-height: 1.7; margin-bottom: 32px; text-align-last: center; }
 
         /* Service Card */
         .service-card {

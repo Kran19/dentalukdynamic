@@ -37,4 +37,11 @@ class PageAdminController extends Controller
 
         return redirect()->route('admin.pages.index')->with('success', 'Page section content updated successfully.');
     }
+
+    public function destroySection(PageSection $section): RedirectResponse
+    {
+        $section->delete();
+        Cache::forget("page.{$section->page->slug}.section.{$section->section_key}");
+        return redirect()->route('admin.pages.index')->with('success', 'Page section deleted successfully.');
+    }
 }

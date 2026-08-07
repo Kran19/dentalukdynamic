@@ -45,7 +45,12 @@
             transition: all 0.3s ease;
         }
 
-        .cms-brand {
+        .cms-nav::-webkit-scrollbar {
+    display: none;
+}
+
+
+         .cms-brand {
             padding: 24px 20px;
             border-bottom: 1px solid rgba(177, 152, 111, 0.15);
             display: flex;
@@ -62,10 +67,19 @@
             line-height: 1.1;
         }
 
+        /* Sidebar Navigation Container */
         .cms-nav {
             padding: 20px 12px;
-            overflow-y: auto;
+            overflow-y: auto; /* Keep scrolling functionality fully working */
             flex-grow: 1;
+            /* Support Firefox: Hide scrollbar track, thumb, and gutter */
+            scrollbar-width: none;
+        }
+
+        /* Support Chrome, Edge, and Safari: Hide scrollbar track, thumb, and gutter */
+        .cms-nav::-webkit-scrollbar {
+            display: none;
+            width: 0;
         }
 
         .cms-nav-group-title {
@@ -111,12 +125,11 @@
 
         /* Main Content Layout */
         .cms-main {
-            margin-left: var(--cms-sidebar-width);
             flex-grow: 1;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
-            width: calc(100% - var(--cms-sidebar-width));
+            width: 100%;
         }
 
         .cms-header {
@@ -209,50 +222,6 @@
     </style>
 </head>
 <body>
-
-    <!-- Sidebar -->
-    <aside class="cms-sidebar">
-        <a href="{{ route('admin.dashboard') }}" class="cms-brand">
-            <i class="fa-solid fa-tooth fs-3 text-warning"></i>
-            <div>
-                <div class="cms-brand-text">ICON DENTAL</div>
-                <div class="text-white-50" style="font-size: 11px; letter-spacing: 1px;">PRACTICE CMS</div>
-            </div>
-        </a>
-
-        <nav class="cms-nav">
-            <div class="cms-nav-group-title">Main Dashboard</div>
-            <a href="{{ route('admin.dashboard') }}" class="cms-nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
-                <i class="fa-solid fa-gauge"></i> Dashboard
-            </a>
-
-            <div class="cms-nav-group-title">Patient Management</div>
-            <a href="{{ route('admin.appointments.index') }}" class="cms-nav-link {{ request()->routeIs('admin.appointments.*') ? 'active' : '' }}">
-                <i class="fa-regular fa-calendar-check"></i> Appointments
-            </a>
-            <a href="{{ route('admin.referrals.index') }}" class="cms-nav-link {{ request()->routeIs('admin.referrals.*') ? 'active' : '' }}">
-                <i class="fa-solid fa-file-medical"></i> Dentist Referrals
-            </a>
-
-            <div class="cms-nav-group-title">Website Content CMS</div>
-            <a href="{{ route('admin.team.index') }}" class="cms-nav-link {{ request()->routeIs('admin.team.*') ? 'active' : '' }}">
-                <i class="fa-solid fa-user-doctor"></i> Dental Team
-            </a>
-            <a href="{{ route('admin.fees.index') }}" class="cms-nav-link {{ request()->routeIs('admin.fees.*') ? 'active' : '' }}">
-                <i class="fa-solid fa-receipt"></i> Fee Guide & Rates
-            </a>
-            <a href="{{ route('admin.settings.index') }}" class="cms-nav-link {{ request()->routeIs('admin.settings.*') ? 'active' : '' }}">
-                <i class="fa-solid fa-sliders"></i> Global Settings
-            </a>
-        </nav>
-
-        <div class="p-3 border-top border-secondary border-opacity-25">
-            <div class="d-flex align-items-center justify-content-between text-white-50 small">
-                <span>Version 2.0 (Laravel 12)</span>
-                <span class="badge bg-success">Active</span>
-            </div>
-        </div>
-    </aside>
 
     <!-- Main Section -->
     <div class="cms-main">

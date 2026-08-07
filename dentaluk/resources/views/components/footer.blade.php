@@ -70,13 +70,13 @@
             <div class="footer-links-col">
                 <h4 class="footer-col-header">Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="{{ route('home') }}">Home</a></li>
-                    <li><a href="{{ route('about.index') }}">About Us</a></li>
-                    <li><a href="{{ route('about.team') }}">Meet The Team</a></li>
-                    <li><a href="{{ route('treatments.index') }}">Treatments</a></li>
-                    <li><a href="{{ route('fees') }}">Fees &amp; Membership</a></li>
-                    <li><a href="{{ route('dentists') }}">For Dentists</a></li>
-                    <li><a href="{{ route('contact') }}">Contact Us</a></li>
+                    <li><a href="{{ route('home') }}" class="footer-link-item">Home</a></li>
+                    <li><a href="{{ route('about.index') }}" class="footer-link-item">About Us</a></li>
+                    <li><a href="{{ route('about.team') }}" class="footer-link-item">Meet The Team</a></li>
+                    <li><a href="{{ route('treatments.index') }}" class="footer-link-item">Treatments</a></li>
+                    <li><a href="{{ route('fees') }}" class="footer-link-item">Fees &amp; Membership</a></li>
+                    <li><a href="{{ route('dentists') }}" class="footer-link-item">For Dentists</a></li>
+                    <li><a href="{{ route('contact') }}" class="footer-link-item">Contact Us</a></li>
                 </ul>
             </div>
             
@@ -114,12 +114,12 @@
         </div>
 
         <!-- Bottom Row -->
-        <div class="footer-bottom-row pt-3">
-            <p>&copy; {{ date('Y') }} Icon Dental Wembley. All rights reserved. Designed for Excellence.</p>
-            <div class="footer-bottom-links">
-                <a href="{{ route('contact') }}">Contact Us</a>
-                <a href="{{ route('booking.create') }}">Book Online</a>
-                <a href="{{ route('admin.dashboard') }}">Admin Portal</a>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 mt-2">
+            <p class="mb-3 mb-md-0 text-white-50" style="font-size: 13px;">&copy; {{ date('Y') }} Icon Dental Wembley. All rights reserved. Designed for Excellence.</p>
+            <div class="d-flex flex-wrap gap-4 align-items-center">
+                <a href="{{ route('contact') }}" class="footer-link-item" style="font-size: 13px;">Contact Us</a>
+                <a href="{{ route('booking.create') }}" class="footer-link-item" style="font-size: 13px;">Book Online</a>
+                <a href="{{ route('admin.dashboard') }}" class="footer-link-item" style="font-size: 13px;">Admin Portal</a>
             </div>
         </div>
 

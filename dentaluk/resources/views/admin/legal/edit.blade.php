@@ -29,8 +29,8 @@
                     </div>
 
                     <div class="col-12">
-                        <label class="form-label small text-light">Policy Body Content (HTML / Rich Text)</label>
-                        <textarea name="content" class="form-control bg-dark text-light border-secondary font-monospace" rows="14" required>{{ old('content', $page->content) }}</textarea>
+                        <label class="form-label small text-light">Policy Body Content (Rich Text)</label>
+                        <textarea id="richTextEditor" name="content" class="form-control bg-dark text-light border-secondary" rows="14">{{ old('content', $page->content) }}</textarea>
                     </div>
 
                     <div class="col-md-6">
@@ -52,4 +52,22 @@
             </form>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: '#richTextEditor',
+            skin: 'oxide-dark',
+            content_css: 'dark',
+            plugins: 'lists link table code help wordcount',
+            toolbar: 'undo redo | blocks | bold italic underline | alignleft aligncenter alignright | bullist numlist | link | code',
+            menubar: false,
+            height: 450,
+            setup: function (editor) {
+                editor.on('change', function () {
+                    editor.save();
+                });
+            }
+        });
+    </script>
 </x-layouts.admin>
