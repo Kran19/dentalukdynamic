@@ -82,7 +82,7 @@
                         </div>
                         
                         <a href="{{ route('booking.create') }}" class="btn-primary-custom w-100 mt-4">
-                            <i class="fa-regular fa-calendar-check"></i> Book Online Now
+                            <i class="fa-regular fa-calendar-check"></i> Book  Now
                         </a>
                     </div>
                 </div>
