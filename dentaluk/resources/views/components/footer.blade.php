@@ -100,22 +100,22 @@
         
         <!-- Legal & Compliance Links Bar -->
         <div class="pt-4 border-top border-secondary border-opacity-25 mt-4">
-            <div class="d-flex flex-wrap justify-content-center gap-4 text-white-50" style="font-size: 13px;">
-                <a href="{{ route('legal.complaints') }}" class="text-white-50 text-decoration-none">Complaints Policy</a>
+            <div class="d-flex flex-wrap justify-content-center gap-4 text-secondary" style="font-size: 13px;">
+                <a href="{{ route('legal.complaints') }}" class="footer-link-item text-decoration-none">Complaints Policy</a>
                 <span>&bull;</span>
-                <a href="{{ route('legal.data-protection') }}" class="text-white-50 text-decoration-none">Data Protection</a>
+                <a href="{{ route('legal.data-protection') }}" class="footer-link-item text-decoration-none">Data Protection</a>
                 <span>&bull;</span>
-                <a href="{{ route('legal.cookies') }}" class="text-white-50 text-decoration-none">Cookies Policy</a>
+                <a href="{{ route('legal.cookies') }}" class="footer-link-item text-decoration-none">Cookies Policy</a>
                 <span>&bull;</span>
-                <a href="{{ route('legal.privacy') }}" class="text-white-50 text-decoration-none">Privacy Policy</a>
+                <a href="{{ route('legal.privacy') }}" class="footer-link-item text-decoration-none">Privacy Policy</a>
                 <span>&bull;</span>
-                <a href="{{ route('legal.terms') }}" class="text-white-50 text-decoration-none">Terms of Use</a>
+                <a href="{{ route('legal.terms') }}" class="footer-link-item text-decoration-none">Terms of Use</a>
             </div>
         </div>
 
         <!-- Bottom Row -->
         <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-4 mt-2">
-            <p class="mb-3 mb-md-0 text-white-50" style="font-size: 13px;">&copy; {{ date('Y') }} Icon Dental Wembley. All rights reserved. Designed for Excellence.</p>
+            <p class="mb-3 mb-md-0 text-secondary" style="font-size: 13px;">&copy; {{ date('Y') }} Icon Dental Wembley. All rights reserved. Designed for Excellence.</p>
             <div class="d-flex flex-wrap gap-4 align-items-center">
                 <a href="{{ route('contact') }}" class="footer-link-item" style="font-size: 13px;">Contact Us</a>
                 <a href="{{ route('booking.create') }}" class="footer-link-item" style="font-size: 13px;">Book Online</a>
