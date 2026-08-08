@@ -21,11 +21,11 @@
                 <div class="hero-masonry">
                     <div class="masonry-col">
                         <img src="{{ asset('assets/images/kishan seth.jpeg') }}" class="masonry-item-1" alt="Smiling Patient">
-                        <img src="{{ asset('assets/images/Examination.png') }}" class="masonry-item-3" alt="Clear Aligners Patient" style="height: auto;">
+                        <img src="{{ asset('assets/images/Examination.png') }}" class="masonry-item-3" alt="Clear Aligners Patient">
                     </div>
                     <div class="masonry-col">
                         <img src="{{ asset('assets/images/clinic reception waiting area.png') }}" class="masonry-item-2" alt="Clinic Reception">
-                        <img src="{{ asset('assets/images/clinic room 2.png') }}" class="masonry-item-4" alt="Healthy Smile" style="height: 361px;">
+                        <img src="{{ asset('assets/images/clinic room 2.png') }}" class="masonry-item-4" alt="Healthy Smile">
                     </div>
                 </div>
 

@@ -76,8 +76,7 @@
     .treatments-grid,
     .footer-grid,
     .smile-gallery-grid,
-    .hero-grid-alternative,
-    .hero-masonry {
+    .hero-grid-alternative {
         grid-template-columns: 1fr !important;
         gap: 1.5rem !important;
         display: flex !important;
@@ -90,6 +89,8 @@
         max-width: 100%;
         height: auto;
     }
+    
+    .masonry-item-3 { height: 180px; }
 
     .hero-image-wrapper img {
         height: 100% !important;

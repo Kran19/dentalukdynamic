@@ -25,6 +25,12 @@
             --cms-text: #e2e8f0;
         }
 
+        html, body {
+            overflow-x: hidden !important;
+            max-width: 100vw;
+            position: relative;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--cms-bg);
@@ -32,7 +38,6 @@
             min-height: 100vh;
             display: flex;
             margin: 0;
-            overflow-x: hidden;
         }
 
         /* Sidebar Styles */
@@ -289,6 +294,11 @@
                 overflow: visible;
                 box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             }
+            .table-mobile-cards tr:hover,
+            .table-mobile-cards tr:active,
+            .table-mobile-cards tr:focus {
+                background: #e2e8f0 !important;
+            }
             .table-mobile-cards td {
                 display: flex;
                 justify-content: space-between;
@@ -416,8 +426,8 @@
 
                 <!-- User Profile Dropdown -->
                 <div class="dropdown">
-                    <button class="btn btn-dark btn-sm dropdown-toggle rounded-pill px-3 border border-secondary" type="button" data-bs-toggle="dropdown">
-                        <i class="fa-solid fa-user-circle me-1 text-gold"></i> {{ Auth::user()->name ?? 'Administrator' }}
+                    <button class="btn btn-dark btn-sm dropdown-toggle rounded-pill px-2 px-sm-3 border border-secondary" type="button" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-user-circle text-gold"></i> <span class="d-none d-sm-inline ms-1">{{ Auth::user()->name ?? 'Administrator' }}</span>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark shadow">
                         <li><span class="dropdown-header">{{ Auth::user()->email ?? 'admin@icondental' }}</span></li>

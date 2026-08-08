@@ -24,8 +24,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <!-- Custom Style -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css?v=13') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css?v=1') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css?v=14') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive.css?v=2') }}">
 </head>
 <body>
 

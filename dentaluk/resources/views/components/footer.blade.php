@@ -100,15 +100,15 @@
         
         <!-- Legal & Compliance Links Bar -->
         <div class="pt-4 border-top border-secondary border-opacity-25 mt-4">
-            <div class="d-flex flex-wrap justify-content-center gap-4 text-secondary" style="font-size: 13px;">
+            <div class="d-flex flex-wrap justify-content-center gap-2 gap-md-4 text-secondary text-center" style="font-size: 13px;">
                 <a href="{{ route('legal.complaints') }}" class="footer-link-item text-decoration-none">Complaints Policy</a>
-                <span>&bull;</span>
+                <span class="d-none d-md-inline">&bull;</span>
                 <a href="{{ route('legal.data-protection') }}" class="footer-link-item text-decoration-none">Data Protection</a>
-                <span>&bull;</span>
+                <span class="d-none d-md-inline">&bull;</span>
                 <a href="{{ route('legal.cookies') }}" class="footer-link-item text-decoration-none">Cookies Policy</a>
-                <span>&bull;</span>
+                <span class="d-none d-md-inline">&bull;</span>
                 <a href="{{ route('legal.privacy') }}" class="footer-link-item text-decoration-none">Privacy Policy</a>
-                <span>&bull;</span>
+                <span class="d-none d-md-inline">&bull;</span>
                 <a href="{{ route('legal.terms') }}" class="footer-link-item text-decoration-none">Terms of Use</a>
             </div>
         </div>

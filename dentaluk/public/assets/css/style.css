@@ -11,6 +11,12 @@
             --transition: all 0.3s ease;
         }
 
+        html, body {
+            overflow-x: hidden !important;
+            max-width: 100vw;
+            position: relative;
+        }
+
         body {
             font-family: var(--body-font);
             color: var(--text-gray);
@@ -6002,11 +6008,12 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            justify-content: flex-start;
         }
 
-        .masonry-item-1 { height: 320px; border-radius: 24px; object-fit: cover; width: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .masonry-item-1 { height: 320px; border-radius: 24px; object-fit: cover; object-position: top; width: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
         .masonry-item-2 { height: 420px; border-radius: 24px; object-fit: cover; width: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
-        .masonry-item-3 { height: 280px; border-radius: 24px; object-fit: cover; width: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .masonry-item-3 { height: 260px; border-radius: 24px; object-fit: cover; width: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.1); margin-bottom: auto; }
         .masonry-item-4 { height: 160px; border-radius: 24px; object-fit: cover; width: 100%; box-shadow: 0 15px 35px rgba(0,0,0,0.1); margin-top: auto; }
 
         .hero-text-content {
@@ -6437,8 +6444,9 @@
             .btn-primary-custom, .btn-outline-custom { width: 100%; justify-content: center; }
             .emergency-card { padding: 1.5rem; }
             .features-inner { padding: 18px 16px; }
-            .wcc-number-wrapper { padding: 15px; }
-            .wcc-number { font-size: 28px; }
+            .wcc-number-wrapper { padding: 12px; }
+            .wcc-label { font-size: 11px; letter-spacing: 1px; margin-bottom: 4px; }
+            .wcc-number { font-size: 22px; }
             
             /* Mobile Grid */
             .hero-masonry {
@@ -6446,10 +6454,11 @@
                 gap: 12px;
             }
             .masonry-col { gap: 12px; }
-            .masonry-item-1 { height: 200px; }
+            .masonry-item-1 { height: 200px; object-position: top; }
             .masonry-item-2 { height: 260px; }
             .masonry-item-3 { height: 180px; }
             .masonry-item-4 { height: 120px; }
+            .footer-status-tag { width: fit-content; margin: 15px auto 0 auto; justify-content: center; border-radius: 30px; }
         }
 
         @media (max-width: 480px) {

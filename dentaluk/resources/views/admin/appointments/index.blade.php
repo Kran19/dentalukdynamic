@@ -33,7 +33,7 @@
                                 @php $statusColor = '#e6a817'; $statusTextColor = '#000'; @endphp
                             @endif
                             <tr style="position: relative; z-index: {{ 1000 - $loop->index }};">
-                                <td data-label="ID" style="color:#555; position: relative; z-index: {{ 1000 - $loop->index }};">#{{ $apt->id }}</td>
+                                <td data-label="ID" style="color:#555; position: relative; z-index: {{ 1000 - $loop->index }};">#{{ ($appointments->currentPage() - 1) * $appointments->perPage() + $loop->iteration }}</td>
                                 <td data-label="Patient Name" style="color:#111; font-weight:600; position: relative; z-index: {{ 1000 - $loop->index }};">{{ $apt->full_name }}</td>
                                 <td data-label="Email" style="color:#333; position: relative; z-index: {{ 1000 - $loop->index }};">{{ $apt->email }}</td>
                                 <td data-label="Phone" style="color:#333; position: relative; z-index: {{ 1000 - $loop->index }};">{{ $apt->phone }}</td>
@@ -96,7 +96,7 @@
                             </tr>
                         @empty
                             <tr>
-                                <td colspan="8" class="text-center text-secondary py-4" style="color: #6c757d !important;">No appointment bookings found.</td>
+                                <td colspan="8" class="text-center text-secondary py-4" style="color: #6c757d !important; justify-content: center !important;">No appointment bookings found.</td>
                             </tr>
                         @endforelse
                     </tbody>
