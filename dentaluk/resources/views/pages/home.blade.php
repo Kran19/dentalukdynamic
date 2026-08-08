@@ -231,7 +231,7 @@
                     <div class="col-lg-6">
                         <span class="hero-badge">{{ $emergencySec->subtitle ?? 'SMILE MAKEOVER' }}</span>
                         <h2 class="welcome-title">{{ $emergencySec->title ?? 'Transform Your Smile' }}</h2>
-                        <p class="welcome-desc">{{ $emergencySec->content['makeover_desc'] ?? 'Our smile makeover treatments combine cosmetic dentistry techniques.' }}</p>
+                        <p class="welcome-desc" style="text-align-last: left;">{{ $emergencySec->content['makeover_desc'] ?? 'Our smile makeover treatments combine cosmetic dentistry techniques.' }}</p>
                         
                         @if (isset($emergencySec->content['makeover_pills']))
                             <div class="row g-3 mb-4">
@@ -270,7 +270,7 @@
                         <div class="new-patient-content">
                             <span class="hero-badge"><i class="fa-solid fa-user-plus me-2"></i> {{ $newPatientSec->subtitle ?? 'NEW PATIENTS' }}</span>
                             <h2 class="welcome-title text-start">{{ $newPatientSec->title ?? 'New Patients Welcome' }}</h2>
-                            <p class="welcome-desc text-start" style="max-width: 100%;">{{ $newPatientSec->content['description'] ?? "Whether you're looking for a family dentist, cosmetic treatment, or emergency appointment, we're here to help." }}</p>
+                            <p class="welcome-desc text-start" style="max-width: 100%; text-align-last: left;">{{ $newPatientSec->content['description'] ?? "Whether you're looking for a family dentist, cosmetic treatment, or emergency appointment, we're here to help." }}</p>
                             
                             @if (isset($newPatientSec->content['checklist']))
                                 <ul class="new-patient-list text-start">
