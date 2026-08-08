@@ -38,7 +38,7 @@
                     <br>
 
                     <h3 class="hero-title" style="font-size: 40px;">{!! nl2br(e($heroSec->title ?? "Enhance Your Smile.\nEnhance Your Confidence.")) !!}</h3>
-                    <p class="hero-desc" style="font-size: 20px;">{{ $heroSec->content['description'] ?? 'Experience modern dentistry in a comfortable, welcoming environment where your smile comes first.' }}</p>
+                    <p class="hero-desc" style="font-size: 20px;">{{ $heroSec->content['description'] ?? 'Experience modern dentistry in a comfortable, welcoming environments where your smile comes first.' }}</p>
                     
                     <div class="btn-group-custom d-flex gap-3 hero-actions">
                         <a href="{{ url($heroSec->content['primary_btn_url'] ?? '/book-online') }}" class="btn-primary-custom px-4 py-3 m-0" style="font-size: 16px;">
