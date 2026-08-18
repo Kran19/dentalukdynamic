@@ -63,6 +63,30 @@
                 </div>
             </div>
 
+            <!-- Patient Transformations -->
+            <div class="mb-5">
+                <h3 class="text-center mb-4" style="font-family: var(--heading-font); font-size: 36px;">Real Patient Results</h3>
+                <div class="transformation-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+                    <div class="trans-card">
+                        <div class="trans-img-container">
+                            <div class="trans-img-half">
+                                <img src="{{ asset('assets/images/before-lips.jpeg') }}" alt="Before Facial Aesthetics">
+                                <span class="trans-badge">Before</span>
+                            </div>
+                            <div class="trans-img-half">
+                                <img src="{{ asset('assets/images/facial.jpeg') }}" alt="After Facial Aesthetics">
+                                <span class="trans-badge">After</span>
+                            </div>
+                        </div>
+                        <div class="trans-content">
+                            <div class="trans-category">FACIAL AESTHETICS</div>
+                            <h3 class="trans-title">Enhancing Natural Beauty</h3>
+                            <p class="trans-desc">Subtle, non-surgical enhancements smoothed fine lines and added volume, creating a refreshed and youthful appearance.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="cta-banner mt-5">
                 <div class="cta-left">
                     <div class="cta-icon-circle"><i class="fa-regular fa-calendar-check"></i></div>

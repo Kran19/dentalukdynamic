@@ -64,6 +64,30 @@
                 </div>
             </div>
 
+            <!-- Patient Transformations -->
+            <div class="mb-5">
+                <h3 class="text-center mb-4" style="font-family: var(--heading-font); font-size: 36px;">Real Patient Results</h3>
+                <div class="transformation-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+                    <div class="trans-card">
+                        <div class="trans-img-container">
+                            <div class="trans-img-half">
+                                <img src="{{ asset('assets/images/teethbeforedada.jpeg') }}" alt="Before Tooth Repair">
+                                <span class="trans-badge">Before</span>
+                            </div>
+                            <div class="trans-img-half">
+                                <img src="{{ asset('assets/images/dada-after.jpeg') }}" alt="After Tooth Repair">
+                                <span class="trans-badge">After</span>
+                            </div>
+                        </div>
+                        <div class="trans-content">
+                            <div class="trans-category">TOOTH REPAIR & RESTORATION</div>
+                            <h3 class="trans-title">Restoring Function and Form</h3>
+                            <p class="trans-desc">Damaged teeth were successfully repaired with custom restorations, bringing back natural strength and a seamless look.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="cta-banner mt-5">
                 <div class="cta-left">
                     <div class="cta-icon-circle"><i class="fa-regular fa-calendar-check"></i></div>

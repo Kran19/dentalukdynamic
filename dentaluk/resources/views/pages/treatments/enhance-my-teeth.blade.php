@@ -23,7 +23,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image-wrapper mt-4 mt-lg-0" style="border-radius: 20px; overflow: hidden; border: 1px solid rgba(177,152,111,0.25);">
-                        <img src="{{ asset('assets/images/invisalign-treatment.jpg') }}" alt="Invisalign Treatment" style="width: 100%;">
+                        <img src="{{ asset('assets/images/Enhance.png') }}" alt="Invisalign Treatment" style="width: 100%;">
                     </div>
                 </div>
             </div>
@@ -59,6 +59,30 @@
                         <i class="fa-regular fa-face-smile mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Composite Bonding</h3>
                         <p>Artistic tooth-colored resin sculpting to smooth chips, close gaps, and reshape teeth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patient Transformations -->
+            <div class="mb-5">
+                <h3 class="text-center mb-4" style="font-family: var(--heading-font); font-size: 36px;">Real Patient Results</h3>
+                <div class="transformation-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+                    <div class="trans-card">
+                        <div class="trans-img-container">
+                            <div class="trans-img-half">
+                                <img src="{{ asset('assets/images/teethbefore.jpeg') }}" alt="Before Cosmetic Enhancement">
+                                <span class="trans-badge">Before</span>
+                            </div>
+                            <div class="trans-img-half">
+                                <img src="{{ asset('assets/images/teethafter.jpeg') }}" alt="After Cosmetic Enhancement">
+                                <span class="trans-badge">After</span>
+                            </div>
+                        </div>
+                        <div class="trans-content">
+                            <div class="trans-category">SMILE MAKEOVER</div>
+                            <h3 class="trans-title">From Uneasy to Unstoppable</h3>
+                            <p class="trans-desc">A combination of bespoke cosmetic treatments gave our patient the confidence to smile without holding back.</p>
+                        </div>
                     </div>
                 </div>
             </div>

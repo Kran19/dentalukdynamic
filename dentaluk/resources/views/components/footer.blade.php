@@ -12,7 +12,6 @@
 
     $phone = \App\Models\Setting::get('phone', config('clinic.phone'));
     $phoneClean = \App\Models\Setting::get('phone_clean', config('clinic.phone_clean'));
-    $fax = \App\Models\Setting::get('fax', config('clinic.fax'));
     $email = \App\Models\Setting::get('email', config('clinic.email'));
     $address = \App\Models\Setting::get('address', config('clinic.address'));
     $mapLink = \App\Models\Setting::get('map_link', config('clinic.map_link'));
@@ -30,19 +29,17 @@
                 <img src="{{ asset('assets/images/logo-dark.png') }}" alt="Icon Dental" class="logo-dark" style="height: 140px;">
             </a>
             
-            <div class="footer-contact-row">
-                <a href="tel:{{ $phoneClean }}" class="footer-contact-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <span>Tel: {{ $phone }}</span>
-                </a>
-                <span class="footer-contact-item" style="cursor: default;">
-                    <i class="fa-solid fa-fax"></i>
-                    <span>Fax: {{ $fax }}</span>
-                </span>
-                <a href="mailto:{{ $email }}" class="footer-contact-item">
-                    <i class="fa-regular fa-envelope"></i>
-                    <span>{{ $email }}</span>
-                </a>
+            <div class="footer-contact-column" style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                <div class="footer-contact-row" style="margin-bottom: 0;">
+                    <a href="tel:{{ $phoneClean }}" class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Tel: {{ $phone }}</span>
+                    </a>
+                    <a href="mailto:{{ $email }}" class="footer-contact-item">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>{{ $email }}</span>
+                    </a>
+                </div>
                 <a href="{{ $mapLink }}" target="_blank" rel="noopener noreferrer" class="footer-contact-item" style="text-decoration: none;">
                     <i class="fa-solid fa-location-dot"></i>
                     <span>{{ $address }}</span>
@@ -56,7 +53,7 @@
             <div class="footer-manifesto">
                 <h3>Elevating the standard of modern dentistry.</h3>
                 <p>We combine advanced technology with a premium patient experience. From routine care to complex cosmetic makeovers, we design smiles that exude health and confidence.</p>
-                <a href="{{ config('clinic.google_reviews_url') }}" target="_blank" rel="noopener noreferrer" class="footer-review-card">
+                <a href="{{ route('leave-review') }}" class="footer-review-card">
                     <div class="frc-icon">
                         <i class="fa-solid fa-star"></i>
                     </div>
@@ -82,11 +79,11 @@
             
             <div class="footer-hours-col">
                 <h4 class="footer-col-header">Visiting Hours</h4>
-                <ul class="footer-hours-list">
+                <ul class="footer-links" style="cursor: default; gap: 12px;">
                     @foreach (config('clinic.hours') as $days => $hours)
-                        <li>
+                        <li style="color: var(--footer-text-body); font-size: 15px; display: flex; flex-direction: column; padding-bottom: 8px;">
                             <span>{{ $days }}</span>
-                            <span>{{ $hours }}</span>
+                            <span style="opacity: 0.8; margin-top: 2px;">{{ $hours }}</span>
                         </li>
                     @endforeach
                 </ul>

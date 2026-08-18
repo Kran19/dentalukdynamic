@@ -80,10 +80,10 @@
                     </a>
                     <p class="mega-column-desc">Routine examinations, advanced diagnostics, and preventive treatments for healthy teeth.</p>
                     <ul class="mega-links-list">
-                        <li><a href="{{ route('treatments.check') }}#checkup">Dental Check-up</a></li>
-                        <li><a href="{{ route('treatments.check') }}#hygiene">Hygiene & Cleanings</a></li>
-                        <li><a href="{{ route('treatments.check') }}#gum-health">Gum Health Care</a></li>
-                        <li><a href="{{ route('treatments.check') }}#emergency">Emergency Dentistry</a></li>
+                        <li><a href="{{ route('treatments.check') }}">Dental Check-up</a></li>
+                        <li><a href="{{ route('treatments.check') }}">Hygiene & Cleanings</a></li>
+                        <li><a href="{{ route('treatments.check') }}">Gum Health Care</a></li>
+                        <li><a href="{{ route('treatments.check') }}">Emergency Dentistry</a></li>
                     </ul>
                 </div>
 
@@ -95,10 +95,10 @@
                     </a>
                     <p class="mega-column-desc">Restorative dentistry to fix damage, treat decay, and rebuild structural tooth integrity.</p>
                     <ul class="mega-links-list">
-                        <li><a href="{{ route('treatments.repair') }}#fillings">Tooth Fillings</a></li>
-                        <li><a href="{{ route('treatments.repair') }}#root-canal">Root Canal Treatment</a></li>
-                        <li><a href="{{ route('treatments.repair') }}#crowns">Dental Crowns</a></li>
-                        <li><a href="{{ route('treatments.repair') }}#bridges">Dental Bridges</a></li>
+                        <li><a href="{{ route('treatments.repair') }}">Tooth Fillings</a></li>
+                        <li><a href="{{ route('treatments.repair') }}">Root Canal Treatment</a></li>
+                        <li><a href="{{ route('treatments.repair') }}">Dental Crowns</a></li>
+                        <li><a href="{{ route('treatments.repair') }}">Dental Bridges</a></li>
                     </ul>
                 </div>
 
@@ -110,9 +110,9 @@
                     </a>
                     <p class="mega-column-desc">State-of-the-art replacement options to restore confidence, speech, and biting function.</p>
                     <ul class="mega-links-list">
-                        <li><a href="{{ route('treatments.replace') }}#implants">Dental Implants</a></li>
-                        <li><a href="{{ route('treatments.replace') }}#dentures">Complete Dentures</a></li>
-                        <li><a href="{{ route('treatments.replace') }}#full-reconstruction">Full Smile Restoration</a></li>
+                        <li><a href="{{ route('treatments.replace') }}">Dental Implants</a></li>
+                        <li><a href="{{ route('treatments.replace') }}">Complete Dentures</a></li>
+                        <li><a href="{{ route('treatments.replace') }}">Full Smile Restoration</a></li>
                     </ul>
                 </div>
 
@@ -124,10 +124,10 @@
                     </a>
                     <p class="mega-column-desc">Bespoke cosmetic treatments designed to elevate your aesthetic appearance.</p>
                     <ul class="mega-links-list">
-                        <li><a href="{{ route('treatments.enhance') }}#invisalign">Invisalign® Aligners</a></li>
-                        <li><a href="{{ route('treatments.enhance') }}#whitening">Teeth Whitening</a></li>
-                        <li><a href="{{ route('treatments.enhance') }}#veneers">Porcelain Veneers</a></li>
-                        <li><a href="{{ route('treatments.enhance') }}#bonding">Composite Bonding</a></li>
+                        <li><a href="{{ route('treatments.enhance') }}">Invisalign® Aligners</a></li>
+                        <li><a href="{{ route('treatments.enhance') }}">Teeth Whitening</a></li>
+                        <li><a href="{{ route('treatments.enhance') }}">Porcelain Veneers</a></li>
+                        <li><a href="{{ route('treatments.enhance') }}">Composite Bonding</a></li>
                     </ul>
                 </div>
 
@@ -139,10 +139,10 @@
                     </a>
                     <p class="mega-column-desc">Non-surgical cosmetic procedures to enhance skin tone and refresh natural youthfulness.</p>
                     <ul class="mega-links-list">
-                        <li><a href="{{ route('treatments.facial') }}#wrinkles">Anti-Wrinkle Care</a></li>
-                        <li><a href="{{ route('treatments.facial') }}#fillers">Dermal Fillers</a></li>
-                        <li><a href="{{ route('treatments.facial') }}#lips">Lip Enhancement</a></li>
-                        <li><a href="{{ route('treatments.facial') }}#rejuvenation">Skin Rejuvenation</a></li>
+                        <li><a href="{{ route('treatments.facial') }}">Anti-Wrinkle Care</a></li>
+                        <li><a href="{{ route('treatments.facial') }}">Dermal Fillers</a></li>
+                        <li><a href="{{ route('treatments.facial') }}">Lip Enhancement</a></li>
+                        <li><a href="{{ route('treatments.facial') }}">Skin Rejuvenation</a></li>
                     </ul>
                 </div>
             </div>
@@ -267,7 +267,7 @@
             </div>
             <div class="pgn-mobile-submenu">
                 <a href="{{ route('referral.create') }}" class="pgn-mobile-subitem">Refer a Patient</a>
-                <a href="{{ route('dentists') }}#careers" class="pgn-mobile-subitem">Education &amp; Careers</a>
+                <a href="{{ route('dentists') }}" class="pgn-mobile-subitem">Education &amp; Careers</a>
             </div>
         </div>
 

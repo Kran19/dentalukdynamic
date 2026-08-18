@@ -171,7 +171,7 @@
         }
 
         function editFee(id, item, nhs, private, denplan, sort) {
-            document.getElementById('editFeeForm').action = '/admin/fees/' + id;
+            document.getElementById('editFeeForm').action = '/admin/fee-items/' + id;
             document.getElementById('e_treatment_item').value = item;
             document.getElementById('e_nhs_fee').value = nhs;
             document.getElementById('e_private_fee').value = private;

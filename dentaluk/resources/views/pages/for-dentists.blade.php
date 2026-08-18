@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image-wrapper">
-                        <img src="{{ asset('assets/images/kishan seth.jpeg') }}" alt="Professional healthcare" class="hero-image">
+                        <img src="{{ asset('assets/images/partnerwithus.png') }}" alt="Professional healthcare" class="hero-image" style="object-position: 45% center;">
                     </div>
                 </div>
             </div>

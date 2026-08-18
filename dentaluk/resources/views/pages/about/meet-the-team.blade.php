@@ -171,7 +171,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image-wrapper">
-                        <img src="{{ asset('assets/images/team.png') }}" alt="Dental Clinic Team" class="about-image img-light">
+                        <img src="{{ asset('assets/images/team.png') }}" alt="Dental Clinic Team" class="about-image">
                     </div>
                 </div>
             </div>

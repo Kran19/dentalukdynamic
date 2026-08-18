@@ -12,7 +12,6 @@
         }
 
         html, body {
-            overflow-x: hidden !important;
             max-width: 100vw;
             position: relative;
         }
@@ -1046,6 +1045,20 @@
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
             margin-bottom: 80px;
+        }
+
+        @media (max-width: 991.98px) {
+            .transformation-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 767.98px) {
+            .transformation-grid {
+                grid-template-columns: 1fr;
+            }
+            .trans-img-container {
+                height: 200px;
+            }
         }
 
         .trans-card {
@@ -4707,7 +4720,7 @@
     /* Asymmetrical Grid */
     .footer-asymmetric-grid {
         display: grid;
-        grid-template-columns: 2.5fr 1fr 1fr 1.5fr;
+        grid-template-columns: 2.5fr 1fr 1.5fr;
         gap: 60px;
         margin-bottom: 80px;
     }

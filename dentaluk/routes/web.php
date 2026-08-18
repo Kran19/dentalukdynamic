@@ -67,6 +67,9 @@ Route::post('/book-online', [BookingController::class, 'store'])->name('booking.
 // Contact Us
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contact');
 
+// Review Page
+Route::get('/leave-review', fn() => view('pages.leave-review'))->name('leave-review');
+
 // Public Legal Pages
 Route::get('/complaints', fn () => app(LegalPageController::class)->show('complaints'))->name('legal.complaints');
 Route::get('/data-protection', fn () => app(LegalPageController::class)->show('data-protection'))->name('legal.data-protection');

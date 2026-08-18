@@ -123,13 +123,6 @@
                                 </div>
                             </li>
                             <li class="contact-detail-item">
-                                <div class="contact-icon-circle"><i class="fa-solid fa-fax"></i></div>
-                                <div class="contact-text-box">
-                                    <h5>Fax</h5>
-                                    <p>{{ config('clinic.fax') }}</p>
-                                </div>
-                            </li>
-                            <li class="contact-detail-item">
                                 <div class="contact-icon-circle"><i class="fa-regular fa-envelope"></i></div>
                                 <div class="contact-text-box">
                                     <h5>Email Address</h5>

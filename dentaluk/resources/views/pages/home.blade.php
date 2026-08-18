@@ -12,44 +12,81 @@
 @endphp
 
 <x-app-layout title="{{ $heroSec->page->meta_title ?? 'Icon Dental- Wembley | Exceptional Dental Care' }}" description="{{ $heroSec->page->meta_description ?? 'At Icon Dental- Wembley, we combine advanced technology with a gentle, personal touch to create healthy, confident smiles that last a lifetime.' }}">
+    <style>
+        /* Light Mode Colors (Default) */
+        .hero-bg-custom {
+            background-color: #fdfaf5; 
+            background-image: radial-gradient(circle at 20% 0%, rgba(255,255,255,0.8) 0%, transparent 50%), radial-gradient(circle at 80% 0%, rgba(255,255,255,0.8) 0%, transparent 50%);
+        }
+        .hero-crest-line { background-color: #2C3E2E; opacity: 0.3; }
+        .light-mode-logo { display: inline-block; mix-blend-mode: multiply; filter: none; }
+        .dark-mode-logo { display: none; }
+        .hero-title-custom { color: #2C3E2E; }
+        .hero-subtitle-custom { color: #B39B71; }
+        .hero-subtitle-line { background-color: #B39B71; }
+        .hero-main-text { color: #2C3E2E; }
+        .hero-desc-custom { color: #555; }
+        
+        /* Dark Mode Overrides */
+        body.dark-theme .hero-bg-custom {
+            background-color: transparent;
+            background-image: radial-gradient(circle at 20% 0%, rgba(179, 155, 113, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 0%, rgba(179, 155, 113, 0.05) 0%, transparent 50%);
+        }
+        body.dark-theme .hero-crest-line { background-color: #ffffff; opacity: 0.2; }
+        body.dark-theme .light-mode-logo { display: none; }
+        body.dark-theme .dark-mode-logo { display: inline-block; mix-blend-mode: screen; filter: none; }
+        body.dark-theme .hero-title-custom { color: #ffffff; }
+        body.dark-theme .hero-subtitle-custom { color: #B39B71; }
+        body.dark-theme .hero-subtitle-line { background-color: #B39B71; }
+        body.dark-theme .hero-main-text { color: #ffffff; }
+        body.dark-theme .hero-desc-custom { color: rgba(255, 255, 255, 0.75); }
+    </style>
+
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="container custom-container hero-content">
-            <div class="hero-grid-alternative">
-                
-                <!-- LEFT SIDE: Masonry Image Grid -->
-                <div class="hero-masonry">
-                    <div class="masonry-col">
-                        <img src="{{ asset('assets/images/kishan seth.jpeg') }}" class="masonry-item-1" alt="Smiling Patient">
-                        <img src="{{ asset('assets/images/Examination.png') }}" class="masonry-item-3" alt="Clear Aligners Patient">
-                    </div>
-                    <div class="masonry-col">
-                        <img src="{{ asset('assets/images/clinic reception waiting area.png') }}" class="masonry-item-2" alt="Clinic Reception">
-                        <img src="{{ asset('assets/images/clinic room 2.png') }}" class="masonry-item-4" alt="Healthy Smile">
-                    </div>
+    <section class="hero-section hero-bg-custom text-center position-relative" style="padding: 30px 0 30px 0; overflow: hidden;">
+        <!-- Optional subtle wave decoration via CSS if desired, here just using the soft background -->
+        <div class="container custom-container position-relative" style="z-index: 2;">
+            
+            <!-- Logo Crest with horizontal lines -->
+            <div class="d-flex justify-content-center align-items-center" style="gap: 20px; margin-bottom: 20px; animation: fadeInUp 0.8s ease-out 0.1s backwards;">
+                <div class="hero-crest-line" style="height: 1px; width: 120px;"></div>
+                <img src="{{ asset('assets/images/logohero.png') }}" alt="Icon Dental Crest" class="light-mode-logo" style="height: 100px; width: auto; margin-top: -20px; margin-bottom: -5px;">
+                <img src="{{ asset('assets/images/herodarklogo.png') }}" alt="Icon Dental Crest" class="dark-mode-logo" style="height: 100px; width: auto; margin-top: -20px; margin-bottom: -5px;">
+                <div class="hero-crest-line" style="height: 1px; width: 120px;"></div>
+            </div>
+
+            <!-- Title -->
+            <h1 class="hero-title-custom" style="font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 6vw, 6rem); font-weight: 500; text-transform: uppercase; line-height: 1.0; margin-bottom: 10px; letter-spacing: 2px; animation: fadeInUp 0.8s ease-out 0.3s backwards;">
+                ICON DENTAL<br>WEMBLEY
+            </h1>
+
+            <!-- Subtitle -->
+            <div style="margin-bottom: 15px; animation: fadeInUp 0.8s ease-out 0.5s backwards;">
+                <span class="hero-subtitle-custom" style="font-size: 1.1rem; letter-spacing: 5px; font-weight: 600; text-transform: uppercase;">
+                    {{ $heroSec->subtitle ?? 'NHS & PRIVATE DENTISTRY' }}
+                </span>
+                <div class="hero-subtitle-line" style="height: 1.5px; width: 40px; margin: 10px auto 0;"></div>
+            </div>
+
+            <!-- Main Text -->
+            <h3 class="hero-main-text" style="font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 500; margin-bottom: 15px; animation: fadeInUp 0.8s ease-out 0.7s backwards;">
+                {!! e(str_replace("\n", " ", $heroSec->title ?? "Enhance Your Smile. Enhance Your Confidence.")) !!}
+            </h3>
+
+            <div style="animation: fadeInUp 0.8s ease-out 0.9s backwards;">
+                <p class="hero-desc-custom" style="font-size: 1.1rem; max-width: 900px; margin: 0 auto 20px auto; line-height: 1.6; text-align: center;">
+                    {!! str_replace('environment where ', 'environment where <br>', e($heroSec->content['description'] ?? 'Experience modern dentistry in a comfortable, welcoming environment where your smile comes first. We combine advanced technology with a gentle touch to deliver exceptional results.')) !!}
+                </p>
+
+                <!-- Buttons -->
+                <div class="d-flex justify-content-center gap-3 hero-actions flex-wrap">
+                    <a href="{{ url($heroSec->content['primary_btn_url'] ?? '/book-online') }}" class="btn-primary-custom px-4 py-2 m-0" style="font-size: 15px;">
+                        <i class="fa-regular fa-calendar-check"></i> {{ $heroSec->content['primary_btn_text'] ?? 'Book Consultation' }}
+                    </a>
+                    <a href="{{ url($heroSec->content['secondary_btn_url'] ?? '/treatments') }}" class="btn-outline-custom px-4 py-2 m-0" style="font-size: 15px; background-color: transparent;">
+                        {{ $heroSec->content['secondary_btn_text'] ?? 'Learn More' }} <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
-
-                <!-- RIGHT SIDE: Content Area -->
-                <div class="hero-text-content">
-                    <span class="hero-" style="font-size:40px;color: #b1986f;"> {{ $heroSec->content['brand_label'] ?? 'ICON DENTAL Wembley' }}</span>
-                    <br>
-                
-                    <span class="hero-title" style="font-size: 35px;"> {{ $heroSec->subtitle ?? 'NHS & Private Dentistry.' }}</span>
-                    <br>
-
-                    <h3 class="hero-title" style="font-size: 40px;">{!! nl2br(e($heroSec->title ?? "Enhance Your Smile.\nEnhance Your Confidence.")) !!}</h3>
-                    <p class="hero-desc" style="font-size: 20px;">{{ $heroSec->content['description'] ?? 'Experience modern dentistry in a comfortable, welcoming environments where your smile comes first.' }}</p>
-                    
-                    <div class="btn-group-custom d-flex gap-3 hero-actions">
-                        <a href="{{ url($heroSec->content['primary_btn_url'] ?? '/book-online') }}" class="btn-primary-custom px-4 py-3 m-0" style="font-size: 16px;">
-                            <i class="fa-regular fa-calendar-check"></i> {{ $heroSec->content['primary_btn_text'] ?? 'Book Consultation' }}
-                        </a>
-                        <a href="{{ url($heroSec->content['secondary_btn_url'] ?? '/treatments') }}" class="btn-outline-custom px-4 py-3 m-0" style="font-size: 16px;">
-                            {{ $heroSec->content['secondary_btn_text'] ?? 'Learn More' }} <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -288,8 +325,8 @@
                     </div>
                     
                     <div class="col-lg-6">
-                        <div class="new-patient-img-wrapper">
-                            <img src="{{ asset('assets/images/temp-img.jpeg') }}" class="new-patient-img" alt="New Patients Welcome">
+                        <div class="new-patient-img-wrapper" style="height: auto;">
+                            <img src="{{ asset('assets/images/newsection.png') }}" class="new-patient-img" alt="New Patients Welcome" style="height: auto; width: 100%;">
                         </div>
                     </div>
                 </div>
