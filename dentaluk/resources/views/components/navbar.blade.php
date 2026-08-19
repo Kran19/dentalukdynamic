@@ -78,7 +78,7 @@
                         <div class="mega-icon"><i class="fa-solid fa-clipboard-check"></i></div>
                         <h4 class="mega-column-title">Check My Teeth</h4>
                     </a>
-                    <p class="mega-column-desc">Routine examinations, advanced diagnostics, and preventive treatments for healthy teeth.</p>
+                    <p class="mega-column-desc" style="text-align: left !important;">Routine examinations, advanced diagnostics, and preventive treatments for healthy teeth.</p>
                     <ul class="mega-links-list">
                         <li><a href="{{ route('treatments.check') }}">Dental Check-up</a></li>
                         <li><a href="{{ route('treatments.check') }}">Hygiene & Cleanings</a></li>
@@ -93,7 +93,7 @@
                         <div class="mega-icon"><i class="fa-solid fa-kit-medical"></i></div>
                         <h4 class="mega-column-title">Repair My Teeth</h4>
                     </a>
-                    <p class="mega-column-desc">Restorative dentistry to fix damage, treat decay, and rebuild structural tooth integrity.</p>
+                    <p class="mega-column-desc" style="text-align: left !important;">Restorative dentistry to fix damage, treat decay, and rebuild structural tooth integrity.</p>
                     <ul class="mega-links-list">
                         <li><a href="{{ route('treatments.repair') }}">Tooth Fillings</a></li>
                         <li><a href="{{ route('treatments.repair') }}">Root Canal Treatment</a></li>
@@ -108,7 +108,7 @@
                         <div class="mega-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
                         <h4 class="mega-column-title">Replace My Teeth</h4>
                     </a>
-                    <p class="mega-column-desc">State-of-the-art replacement options to restore confidence, speech, and biting function.</p>
+                    <p class="mega-column-desc" style="text-align: left !important;">State-of-the-art replacement options to restore confidence, speech, and biting function.</p>
                     <ul class="mega-links-list">
                         <li><a href="{{ route('treatments.replace') }}">Dental Implants</a></li>
                         <li><a href="{{ route('treatments.replace') }}">Complete Dentures</a></li>
@@ -122,7 +122,7 @@
                         <div class="mega-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                         <h4 class="mega-column-title">Enhance My Teeth</h4>
                     </a>
-                    <p class="mega-column-desc">Bespoke cosmetic treatments designed to elevate your aesthetic appearance.</p>
+                    <p class="mega-column-desc" style="text-align: left !important;">Bespoke cosmetic treatments designed to elevate your aesthetic appearance.</p>
                     <ul class="mega-links-list">
                         <li><a href="{{ route('treatments.enhance') }}">Invisalign® Aligners</a></li>
                         <li><a href="{{ route('treatments.enhance') }}">Teeth Whitening</a></li>
@@ -137,7 +137,7 @@
                         <div class="mega-icon"><i class="fa-regular fa-face-smile"></i></div>
                         <h4 class="mega-column-title">Facial Aesthetics</h4>
                     </a>
-                    <p class="mega-column-desc">Non-surgical cosmetic procedures to enhance skin tone and refresh natural youthfulness.</p>
+                    <p class="mega-column-desc" style="text-align: left !important;">Non-surgical cosmetic procedures to enhance skin tone and refresh natural youthfulness.</p>
                     <ul class="mega-links-list">
                         <li><a href="{{ route('treatments.facial') }}">Anti-Wrinkle Care</a></li>
                         <li><a href="{{ route('treatments.facial') }}">Dermal Fillers</a></li>
