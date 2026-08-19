@@ -11,7 +11,7 @@
     
     <title>{{ $title }}</title>
     <meta name="description" content="{{ $description }}">
-    <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.png?v=2') }}">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
