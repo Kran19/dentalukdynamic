@@ -342,8 +342,8 @@
 
     <!-- Sidebar -->
     <aside class="cms-sidebar">
-        <a href="{{ route('admin.dashboard') }}" class="cms-brand">
-            <i class="fa-solid fa-tooth fs-3 text-warning"></i>
+        <a href="{{ route('admin.dashboard') }}" class="cms-brand" style="padding: 15px 20px;">
+            <img src="{{ asset('assets/images/herodarklogo.png') }}" alt="Icon Dental" style="height: 40px; width: auto; object-fit: contain;">
             <div>
                 <div class="cms-brand-text">ICON DENTAL</div>
                 <div class="text-white-50" style="font-size: 11px; letter-spacing: 1px;">PAGE-BASED CMS</div>

@@ -1,6 +1,9 @@
 <x-layouts.admin title="Global Settings | Icon Dental CMS" headerTitle="Global Clinic Settings">
     <div class="cms-card">
         <div class="cms-card-header">
+            <style>
+                .hide-scrollbar::-webkit-scrollbar { display: none; }
+            </style>
             <h3 class="cms-card-title"><i class="fa-solid fa-sliders me-2"></i> Global Clinic Settings</h3>
         </div>
         <div class="cms-card-body">
@@ -20,7 +23,7 @@
                                 <label class="form-label text-light fw-medium small">{{ $item->label ?? ucfirst(str_replace('_', ' ', $item->key)) }}</label>
                                 
                                 @if ($item->type === 'textarea')
-                                    <textarea name="{{ $item->key }}" class="form-control bg-dark text-light border-secondary" rows="3">{{ old($item->key, $item->value) }}</textarea>
+                                    <textarea name="{{ $item->key }}" class="form-control bg-dark text-light border-secondary hide-scrollbar" rows="6" style="scrollbar-width: none; -ms-overflow-style: none;">{{ old($item->key, $item->value) }}</textarea>
                                 @else
                                     <input type="text" name="{{ $item->key }}" class="form-control bg-dark text-light border-secondary" value="{{ old($item->key, $item->value) }}">
                                 @endif

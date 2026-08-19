@@ -13,7 +13,7 @@ class SettingSeeder extends Seeder
             ['key' => 'site_name', 'value' => 'Icon Dental Wembley', 'group' => 'general', 'type' => 'text', 'label' => 'Site Name'],
             ['key' => 'phone', 'value' => '020 8998 3030', 'group' => 'contact', 'type' => 'text', 'label' => 'Phone Number'],
             ['key' => 'phone_clean', 'value' => '+442089983030', 'group' => 'contact', 'type' => 'text', 'label' => 'Clean Phone Number'],
-            ['key' => 'fax', 'value' => '0208 998 4052', 'group' => 'contact', 'type' => 'text', 'label' => 'Fax Number'],
+
             ['key' => 'email', 'value' => 'reception@icondentalwembley.co.uk', 'group' => 'contact', 'type' => 'text', 'label' => 'Primary Email'],
             ['key' => 'address', 'value' => '267A Ealing Road, Wembley, HA0 1EU', 'group' => 'contact', 'type' => 'textarea', 'label' => 'Clinic Address'],
             ['key' => 'map_link', 'value' => 'https://maps.app.goo.gl/3547GffVjmtn1XJg8', 'group' => 'contact', 'type' => 'text', 'label' => 'Google Maps Link'],
