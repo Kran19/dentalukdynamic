@@ -78,7 +78,7 @@
                         <div class="mega-icon"><i class="fa-solid fa-clipboard-check"></i></div>
                         <h4 class="mega-column-title">Check My Teeth</h4>
                     </a>
-                    <p class="mega-column-desc" style="text-align: left !important;">Routine examinations, advanced diagnostics, and preventive treatments for healthy teeth.</p>
+                    <p class="mega-column-desc" style="text-align: left !important;">Routine examinations and preventive treatments for healthy teeth.</p>
                     <ul class="mega-links-list">
                         <li><a href="{{ route('treatments.check') }}">Dental Check-up</a></li>
                         <li><a href="{{ route('treatments.check') }}">Hygiene & Cleanings</a></li>
@@ -137,7 +137,7 @@
                         <div class="mega-icon"><i class="fa-regular fa-face-smile"></i></div>
                         <h4 class="mega-column-title">Facial Aesthetics</h4>
                     </a>
-                    <p class="mega-column-desc" style="text-align: left !important;">Non-surgical cosmetic procedures to enhance skin tone and refresh natural youthfulness.</p>
+                    <p class="mega-column-desc" style="text-align: left !important;">Non-surgical procedures to enhance skin tone and refresh youthfulness.</p>
                     <ul class="mega-links-list">
                         <li><a href="{{ route('treatments.facial') }}">Anti-Wrinkle Care</a></li>
                         <li><a href="{{ route('treatments.facial') }}">Dermal Fillers</a></li>
