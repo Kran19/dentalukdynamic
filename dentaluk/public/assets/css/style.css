@@ -9784,6 +9784,7 @@
                 line-height: 1.5;
                 margin-bottom: 20px;
                 padding-left: 2px;
+                text-align: left !important;
             }
 
             .mega-links-list {
