@@ -89,7 +89,7 @@
                 </ul>
                 <div class="footer-status-tag {{ $isOpen ? 'status-open' : 'status-closed' }}">
                     <span class="status-pulse"></span>
-                    <span>{{ $isOpen ? 'Clinic Open Today' : 'Clinic Closed' }}</span>
+                    <span>{{ $isOpen ? 'Clinic Open' : 'Clinic Closed' }}</span>
                 </div>
             </div>
             
