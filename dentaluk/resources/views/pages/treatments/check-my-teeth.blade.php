@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image-wrapper mt-4 mt-lg-0" style="border-radius: 20px; overflow: hidden; border: 1px solid rgba(177,152,111,0.25);">
-                        <img src="{{ asset('assets/images/why-choose-us-hero.png') }}" alt="Dental Examination" style="width: 100%;">
+                        <img src="{{ asset('assets/images/checkmyteeth.png') }}" alt="Dental Examination" style="width: 100%;">
                     </div>
                 </div>
             </div>
