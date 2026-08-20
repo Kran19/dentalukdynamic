@@ -4,7 +4,7 @@
     $currentHour = (int)date('G');
     $isOpen = false;
 
-    if ($currentDay >= 1 && $currentDay <= 3) {
+    if ($currentDay >= 1 && $currentDay <= 4) {
         if ($currentHour >= 9 && $currentHour < 17) $isOpen = true;
     } elseif ($currentDay == 5) {
         if ($currentHour >= 9 && $currentHour < 15) $isOpen = true;
