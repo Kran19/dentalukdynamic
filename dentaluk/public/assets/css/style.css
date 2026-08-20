@@ -6122,6 +6122,9 @@
             box-shadow: 0 15px 35px rgba(177, 152, 111, 0.15);
             border-color: rgba(177, 152, 111, 0.3);
         }
+        .why-choose-card p {
+            text-align: center !important;
+        }
 
         /* Smile Makeover pill boxes */
         .makeover-pill {

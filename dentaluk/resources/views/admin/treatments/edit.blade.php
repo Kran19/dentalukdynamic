@@ -11,11 +11,23 @@
 
     <div class="cms-card">
         <div class="cms-card-body">
-            <form action="{{ route('admin.treatments.update', $treatment) }}" method="POST">
+            <form id="treatmentEditForm" action="{{ route('admin.treatments.update', $treatment) }}" method="POST">
                 @csrf
                 @method('PUT')
 
                 <div class="row g-4">
+                    @if ($errors->any())
+                        <div class="col-12">
+                            <div class="alert alert-danger py-2">
+                                <ul class="mb-0">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    @endif
+
                     <div class="col-md-6">
                         <label class="form-label small text-light">Treatment Category</label>
                         <select name="category_id" class="form-select bg-dark text-light border-secondary" required>
@@ -37,7 +49,7 @@
 
                     <div class="col-md-6 d-flex align-items-end">
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" name="is_published" id="isPublished" {{ $treatment->is_published ? 'checked' : '' }}>
+                            <input class="form-check-input" type="checkbox" name="is_published" id="isPublished" value="1" {{ old('is_published', $treatment->is_published) ? 'checked' : '' }}>
                             <label class="form-check-label text-light small fw-medium" for="isPublished">Published Live</label>
                         </div>
                     </div>
@@ -49,7 +61,7 @@
 
                     <div class="col-12">
                         <label class="form-label small text-light">Full Treatment Content (HTML)</label>
-                        <textarea name="full_content" class="form-control bg-dark text-light border-secondary" rows="8">{{ old('full_content', $treatment->full_content) }}</textarea>
+                        <textarea id="richTextEditor" name="full_content" class="form-control bg-dark text-light border-secondary" rows="8">{{ old('full_content', $treatment->full_content) }}</textarea>
                     </div>
                 </div>
 
@@ -61,4 +73,28 @@
             </form>
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.8.2/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+            selector: '#richTextEditor',
+            skin: 'oxide-dark',
+            content_css: 'dark',
+            plugins: 'lists link table code help wordcount',
+            toolbar: 'undo redo | blocks | bold italic underline | alignleft aligncenter alignright | bullist numlist | link | code',
+            menubar: false,
+            branding: false,
+            height: 250,
+            setup: function (editor) {
+                editor.on('change', function () {
+                    editor.save();
+                });
+            }
+        });
+
+        // Ensure TinyMCE content is synced to the textarea before form submission
+        document.getElementById('treatmentEditForm').addEventListener('submit', function() {
+            tinymce.triggerSave();
+        });
+    </script>
 </x-layouts.admin>

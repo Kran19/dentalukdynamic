@@ -8,7 +8,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <span class="hero-label">PRIVATE TREATMENT FEE GUIDE</span>
-                    <h2 class="hero-title">Quality Dental Care.<br>Simple, Transparent &<br>Great Value.</h2>
+                    <h2 class="hero-title">Quality Dental Care.<br>Simple, Transparent<br>& Great Value.</h2>
                     <p class="hero-desc">Our fee guide provides simple, transparent pricing for all our private and NHS treatments.</p>
                     
                     <div class="hero-features">

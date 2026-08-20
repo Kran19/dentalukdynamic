@@ -71,11 +71,11 @@
                     <div class="trans-card">
                         <div class="trans-img-container">
                             <div class="trans-img-half">
-                                <img src="{{ asset('assets/images/teethbeforedada.jpeg') }}" alt="Before Tooth Repair">
+                                <img src="{{ asset('assets/images/teethbeforedada.jpeg') }}" alt="Before Tooth Repair" style="object-position: bottom;">
                                 <span class="trans-badge">Before</span>
                             </div>
                             <div class="trans-img-half">
-                                <img src="{{ asset('assets/images/dada-after.jpeg') }}" alt="After Tooth Repair">
+                                <img src="{{ asset('assets/images/dada-after.jpeg') }}" alt="After Tooth Repair" style="object-position: bottom;">
                                 <span class="trans-badge">After</span>
                             </div>
                         </div>

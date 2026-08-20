@@ -66,7 +66,7 @@
                 <!-- Card 1 -->
                 <div class="treatment-card">
                     <div class="t-img-container">
-                        <img src="{{ asset('assets/images/general.png') }}" alt="General Dentistry">
+                        <img src="{{ asset('assets/images/checkmyteeth.png') }}" alt="General Dentistry">
                         <div class="t-icon-circle"><i class="fa-solid fa-tooth"></i></div>
                     </div>
                     <div class="t-content">
@@ -118,7 +118,7 @@
                 <!-- Card 5 -->
                 <div class="treatment-card">
                     <div class="t-img-container">
-                        <img src="{{ asset('assets/images/invisalign-treatment.jpg') }}" alt="Facial Aesthetics">
+                        <img src="{{ asset('assets/images/Enhance.png') }}" alt="Facial Aesthetics">
                         <div class="t-icon-circle"><i class="fa-solid fa-border-all"></i></div>
                     </div>
                     <div class="t-content">
@@ -161,13 +161,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="benefit-image-wrapper">
-                    <img src="{{ asset('assets/images/reception.png') }}" alt="Clinic Reception">
-                </div>
+
             </div>
 
             <!-- CTA Section -->
-            <div class="cta-banner">
+            <div class="cta-banner mb-0">
                 <div class="cta-left">
                     <div class="cta-icon-circle"><i class="fa-regular fa-calendar-check"></i></div>
                     <div>

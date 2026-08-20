@@ -11,11 +11,23 @@
 
     <div class="cms-card">
         <div class="cms-card-body">
-            <form action="{{ route('admin.legal.update', $page) }}" method="POST">
+            <form id="legalEditForm" action="{{ route('admin.legal.update', $page) }}" method="POST">
                 @csrf
                 @method('PUT')
 
                 <div class="row g-4">
+                    @if ($errors->any())
+                        <div class="col-12">
+                            <div class="alert alert-danger py-2">
+                                <ul class="mb-0">
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+                    @endif
+
                     <div class="col-md-8">
                         <label class="form-label small text-light">Policy Title</label>
                         <input type="text" name="title" class="form-control bg-dark text-light border-secondary" value="{{ old('title', $page->title) }}" required>
@@ -23,7 +35,7 @@
 
                     <div class="col-md-4 d-flex align-items-end">
                         <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" name="is_published" id="isPublished" {{ $page->is_published ? 'checked' : '' }}>
+                            <input class="form-check-input" type="checkbox" name="is_published" id="isPublished" value="1" {{ old('is_published', $page->is_published) ? 'checked' : '' }}>
                             <label class="form-check-label text-light small fw-medium" for="isPublished">Publish Live</label>
                         </div>
                     </div>
@@ -62,12 +74,18 @@
             plugins: 'lists link table code help wordcount',
             toolbar: 'undo redo | blocks | bold italic underline | alignleft aligncenter alignright | bullist numlist | link | code',
             menubar: false,
+            branding: false,
             height: 450,
             setup: function (editor) {
                 editor.on('change', function () {
                     editor.save();
                 });
             }
+        });
+
+        // Ensure TinyMCE content is synced to the textarea before form submission
+        document.getElementById('legalEditForm').addEventListener('submit', function() {
+            tinymce.triggerSave();
         });
     </script>
 </x-layouts.admin>

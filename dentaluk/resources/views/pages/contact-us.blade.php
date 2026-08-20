@@ -80,7 +80,7 @@
         border-radius: 24px; border: 1px solid rgba(177, 152, 111, 0.35); color: #ffffff;
         display: flex; justify-content: space-between; align-items: center; gap: 30px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); margin-bottom: 90px;
     }
-    .contact-cta-left h3 { font-family: var(--heading-font); font-size: 32px; font-weight: 600; margin-bottom: 10px; }
+    .contact-cta-left h3 { font-family: var(--heading-font); font-size: 32px; font-weight: 600; margin-bottom: 10px; color: var(--primary-blue); }
     .contact-cta-left p { font-size: 16px; color: rgba(255, 255, 255, 0.85); margin: 0; }
     .btn-cta-luxury { background: #b1986f; color: #ffffff; border: 1px solid #b1986f; padding: 14px 32px; border-radius: 10px; font-size: 15px; font-weight: 600; text-decoration: none !important; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s ease; white-space: nowrap; }
     .btn-cta-luxury:hover { background: #9f875e; border-color: #9f875e; color: #ffffff; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(177, 152, 111, 0.4); }
