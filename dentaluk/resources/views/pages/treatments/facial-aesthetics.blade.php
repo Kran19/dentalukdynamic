@@ -42,7 +42,7 @@
                 </div>
                 <div class="col-md-6 col-lg-3" id="fillers">
                     <div class="why-choose-card text-center p-4">
-                        <i class="fa-solid fa-sparkles mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <i class="fa-solid fa-syringe mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Dermal Fillers</h3>
                         <p style="text-align: center !important;">Hyaluronic acid injections to restore lost volume, sculpt cheeks, and soften deep folds.</p>
                     </div>
