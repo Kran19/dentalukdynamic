@@ -33,59 +33,16 @@
     <!-- Content Sections -->
     <section class="section-padding">
         <div class="container custom-container">
-            <div class="row g-4 justify-content-center mb-5">
-                <div class="col-md-6 col-lg-3" id="fillings">
+                        <div class="row g-4 justify-content-center mb-5">
+                @foreach($category->treatments->where('is_published', true) as $treatment)
+                <div class="col-md-6 col-lg-3" id="treatment-{{ $treatment->id }}">
                     <div class="why-choose-card text-center p-4">
-                        <i class="fa-solid fa-tooth mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>Tooth Fillings</h3>
-                        <p>Natural composite resin fillings to seamlessly repair minor cavities and cracked enamel.</p>
+                        <i class="{{ $treatment->icon_class }} mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>{{ $treatment->name }}</h3>
+                        <p>{{ $treatment->short_desc }}</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3" id="root-canal">
-                    <div class="why-choose-card text-center p-4">
-                        <i class="fa-solid fa-stethoscope mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>Root Canal Therapy</h3>
-                        <p>Pain-relieving treatment to save infected or severely damaged inner tooth pulp.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" id="crowns">
-                    <div class="why-choose-card text-center p-4">
-                        <i class="fa-solid fa-crown mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>Dental Crowns</h3>
-                        <p>Bespoke ceramic or porcelain caps that encase fragile teeth to restore strength.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" id="bridges">
-                    <div class="why-choose-card text-center p-4">
-                        <i class="fa-solid fa-bridge mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>Dental Bridges</h3>
-                        <p>Custom restorations anchored to adjacent teeth to fill gaps seamlessly.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Patient Transformations -->
-            <div class="mb-5">
-                <h3 class="text-center mb-4" style="font-family: var(--heading-font); font-size: 36px;">Real Patient Results</h3>
-                <div class="transformation-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
-                    <div class="trans-card">
-                        <div class="trans-img-container">
-                            <div class="trans-img-half">
-                                <img src="{{ asset('assets/images/teethbeforedada.jpeg') }}" alt="Before Tooth Repair" style="object-position: bottom;">
-                                <span class="trans-badge">Before</span>
-                            </div>
-                            <div class="trans-img-half">
-                                <img src="{{ asset('assets/images/dada-after.jpeg') }}" alt="After Tooth Repair" style="object-position: bottom;">
-                                <span class="trans-badge">After</span>
-                            </div>
-                        </div>
-                        <div class="trans-content">
-                            <div class="trans-category">TOOTH REPAIR & RESTORATION</div>
-                            <h3 class="trans-title">Restoring Function and Form</h3>
-                            <p class="trans-desc">Damaged teeth were successfully repaired with custom restorations, bringing back natural strength and a seamless look.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
             <div class="cta-banner mt-5">

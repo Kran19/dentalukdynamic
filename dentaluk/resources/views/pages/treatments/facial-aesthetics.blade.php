@@ -32,59 +32,16 @@
 
     <section class="section-padding">
         <div class="container custom-container">
-            <div class="row g-4 justify-content-center mb-5">
-                <div class="col-md-6 col-lg-3" id="wrinkles">
+                        <div class="row g-4 justify-content-center mb-5">
+                @foreach($category->treatments->where('is_published', true) as $treatment)
+                <div class="col-md-6 col-lg-3" id="treatment-{{ $treatment->id }}">
                     <div class="why-choose-card text-center p-4">
-                        <i class="fa-regular fa-face-smile mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>Anti-Wrinkle Care</h3>
-                        <p>Targeted treatments to relax facial muscles and smooth forehead lines and crow's feet.</p>
+                        <i class="{{ $treatment->icon_class }} mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>{{ $treatment->name }}</h3>
+                        <p>{{ $treatment->short_desc }}</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3" id="fillers">
-                    <div class="why-choose-card text-center p-4">
-                        <i class="fa-solid fa-sparkles mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>Dermal Fillers</h3>
-                        <p>Hyaluronic acid injections to restore lost volume, sculpt cheeks, and soften deep folds.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" id="lips">
-                    <div class="why-choose-card text-center p-4">
-                        <i class="fa-solid fa-heart mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>Lip Enhancement</h3>
-                        <p>Subtle, natural lip volume, hydration, and symmetry enhancement tailored to your face.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3" id="rejuvenation">
-                    <div class="why-choose-card text-center p-4">
-                        <i class="fa-solid fa-wand-magic-sparkles mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>Skin Rejuvenation</h3>
-                        <p>Advanced medical skin therapies to improve texture, elasticity, and youthful radiance.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Patient Transformations -->
-            <div class="mb-5">
-                <h3 class="text-center mb-4" style="font-family: var(--heading-font); font-size: 36px;">Real Patient Results</h3>
-                <div class="transformation-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
-                    <div class="trans-card">
-                        <div class="trans-img-container">
-                            <div class="trans-img-half">
-                                <img src="{{ asset('assets/images/before-lips.jpeg') }}" alt="Before Facial Aesthetics">
-                                <span class="trans-badge">Before</span>
-                            </div>
-                            <div class="trans-img-half">
-                                <img src="{{ asset('assets/images/facial.jpeg') }}" alt="After Facial Aesthetics">
-                                <span class="trans-badge">After</span>
-                            </div>
-                        </div>
-                        <div class="trans-content">
-                            <div class="trans-category">FACIAL AESTHETICS</div>
-                            <h3 class="trans-title">Enhancing Natural Beauty</h3>
-                            <p class="trans-desc">Subtle, non-surgical enhancements smoothed fine lines and added volume, creating a refreshed and youthful appearance.</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
 
             <div class="cta-banner mt-5">
