@@ -37,28 +37,28 @@
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-teeth-open mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Invisalign® Aligners</h3>
-                        <p>Discreet, clear aligners to align misaligned teeth without visible metal brackets.</p>
+                        <p style="text-align: center !important;">Discreet, clear aligners to align misaligned teeth without visible metal brackets.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" id="whitening">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-regular fa-sun mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Teeth Whitening</h3>
-                        <p>Safe in-surgery and home whitening systems to lift stains and brighten enamel significantly.</p>
+                        <p style="text-align: center !important;">Safe in-surgery and home whitening systems to lift stains and brighten enamel significantly.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" id="veneers">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-wand-magic-sparkles mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Porcelain Veneers</h3>
-                        <p>Custom wafer-thin ceramic shells attached to the front of teeth for instant aesthetic symmetry.</p>
+                        <p style="text-align: center !important;">Custom wafer-thin ceramic shells attached to the front of teeth for instant aesthetic symmetry.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" id="bonding">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-regular fa-face-smile mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Composite Bonding</h3>
-                        <p>Artistic tooth-colored resin sculpting to smooth chips, close gaps, and reshape teeth.</p>
+                        <p style="text-align: center !important;">Artistic tooth-colored resin sculpting to smooth chips, close gaps, and reshape teeth.</p>
                     </div>
                 </div>
             </div>

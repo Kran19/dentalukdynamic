@@ -37,21 +37,21 @@
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-screwdriver-wrench mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Dental Implants</h3>
-                        <p>Titanium posts anchored into the jawbone serving as permanent roots to support realistic crowns.</p>
+                        <p style="text-align: center !important;">Titanium posts anchored into the jawbone serving as permanent roots to support realistic crowns.</p>
                     </div>
                 </div>
                 <div class="col-md-4" id="dentures">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-tooth mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Complete & Partial Dentures</h3>
-                        <p>Comfortable, custom-made removable appliances designed to fit snugly and restore your smile.</p>
+                        <p style="text-align: center !important;">Comfortable, custom-made removable appliances designed to fit snugly and restore your smile.</p>
                     </div>
                 </div>
                 <div class="col-md-4" id="full-reconstruction">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-wand-magic-sparkles mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Full Smile Restoration</h3>
-                        <p>Comprehensive rehabilitation combining implants, bridges, and ceramic work for total oral renewal.</p>
+                        <p style="text-align: center !important;">Comprehensive rehabilitation combining implants, bridges, and ceramic work for total oral renewal.</p>
                     </div>
                 </div>
             </div>

@@ -37,28 +37,28 @@
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-regular fa-face-smile mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Anti-Wrinkle Care</h3>
-                        <p>Targeted treatments to relax facial muscles and smooth forehead lines and crow's feet.</p>
+                        <p style="text-align: center !important;">Targeted treatments to relax facial muscles and smooth forehead lines and crow's feet.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" id="fillers">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-sparkles mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Dermal Fillers</h3>
-                        <p>Hyaluronic acid injections to restore lost volume, sculpt cheeks, and soften deep folds.</p>
+                        <p style="text-align: center !important;">Hyaluronic acid injections to restore lost volume, sculpt cheeks, and soften deep folds.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" id="lips">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-heart mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Lip Enhancement</h3>
-                        <p>Subtle, natural lip volume, hydration, and symmetry enhancement tailored to your face.</p>
+                        <p style="text-align: center !important;">Subtle, natural lip volume, hydration, and symmetry enhancement tailored to your face.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" id="rejuvenation">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-wand-magic-sparkles mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Skin Rejuvenation</h3>
-                        <p>Advanced medical skin therapies to improve texture, elasticity, and youthful radiance.</p>
+                        <p style="text-align: center !important;">Advanced medical skin therapies to improve texture, elasticity, and youthful radiance.</p>
                     </div>
                 </div>
             </div>

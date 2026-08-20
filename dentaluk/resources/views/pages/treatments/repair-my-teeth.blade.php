@@ -38,28 +38,28 @@
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-tooth mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Tooth Fillings</h3>
-                        <p>Natural composite resin fillings to seamlessly repair minor cavities and cracked enamel.</p>
+                        <p style="text-align: center !important;">Natural composite resin fillings to seamlessly repair minor cavities and cracked enamel.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" id="root-canal">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-stethoscope mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Root Canal Therapy</h3>
-                        <p>Pain-relieving treatment to save infected or severely damaged inner tooth pulp.</p>
+                        <p style="text-align: center !important;">Pain-relieving treatment to save infected or severely damaged inner tooth pulp.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" id="crowns">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-crown mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Dental Crowns</h3>
-                        <p>Bespoke ceramic or porcelain caps that encase fragile teeth to restore strength.</p>
+                        <p style="text-align: center !important;">Bespoke ceramic or porcelain caps that encase fragile teeth to restore strength.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3" id="bridges">
                     <div class="why-choose-card text-center p-4">
                         <i class="fa-solid fa-bridge mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
                         <h3>Dental Bridges</h3>
-                        <p>Custom restorations anchored to adjacent teeth to fill gaps seamlessly.</p>
+                        <p style="text-align: center !important;">Custom restorations anchored to adjacent teeth to fill gaps seamlessly.</p>
                     </div>
                 </div>
             </div>
