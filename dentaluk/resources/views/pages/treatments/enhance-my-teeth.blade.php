@@ -32,18 +32,59 @@
 
     <section class="section-padding">
         <div class="container custom-container">
-                        <div class="row g-4 justify-content-center mb-5">
-                @if(isset($category) && $category->treatments)
-                @foreach($category->treatments->where('is_published', true) as $treatment)
-                <div class="col-md-6 col-lg-3" id="treatment-{{ $treatment->id }}">
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-md-6 col-lg-3" id="invisalign">
                     <div class="why-choose-card text-center p-4">
-                        <i class="{{ $treatment->icon_class }} mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>{{ $treatment->name }}</h3>
-                        <p>{{ $treatment->short_desc }}</p>
+                        <i class="fa-solid fa-teeth-open mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Invisalign® Aligners</h3>
+                        <p>Discreet, clear aligners to align misaligned teeth without visible metal brackets.</p>
                     </div>
                 </div>
-                @endforeach
-                @endif
+                <div class="col-md-6 col-lg-3" id="whitening">
+                    <div class="why-choose-card text-center p-4">
+                        <i class="fa-regular fa-sun mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Teeth Whitening</h3>
+                        <p>Safe in-surgery and home whitening systems to lift stains and brighten enamel significantly.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" id="veneers">
+                    <div class="why-choose-card text-center p-4">
+                        <i class="fa-solid fa-wand-magic-sparkles mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Porcelain Veneers</h3>
+                        <p>Custom wafer-thin ceramic shells attached to the front of teeth for instant aesthetic symmetry.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" id="bonding">
+                    <div class="why-choose-card text-center p-4">
+                        <i class="fa-regular fa-face-smile mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Composite Bonding</h3>
+                        <p>Artistic tooth-colored resin sculpting to smooth chips, close gaps, and reshape teeth.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patient Transformations -->
+            <div class="mb-5">
+                <h3 class="text-center mb-4" style="font-family: var(--heading-font); font-size: 36px;">Real Patient Results</h3>
+                <div class="transformation-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+                    <div class="trans-card">
+                        <div class="trans-img-container">
+                            <div class="trans-img-half">
+                                <img src="{{ asset('assets/images/teethbefore.jpeg') }}" alt="Before Cosmetic Enhancement">
+                                <span class="trans-badge">Before</span>
+                            </div>
+                            <div class="trans-img-half">
+                                <img src="{{ asset('assets/images/teethafter.jpeg') }}" alt="After Cosmetic Enhancement">
+                                <span class="trans-badge">After</span>
+                            </div>
+                        </div>
+                        <div class="trans-content">
+                            <div class="trans-category">SMILE MAKEOVER</div>
+                            <h3 class="trans-title">From Uneasy to Unstoppable</h3>
+                            <p class="trans-desc">A combination of bespoke cosmetic treatments gave our patient the confidence to smile without holding back.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="cta-banner mt-5">

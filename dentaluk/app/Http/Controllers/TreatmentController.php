@@ -46,19 +46,16 @@ class TreatmentController extends Controller
 
     public function boneGrafting(): View
     {
-        $category = TreatmentCategory::where('slug', 'bone-grafting')->with('treatments')->first();
-        return view('pages.treatments.bone-grafting', compact('category'));
+        return view('pages.treatments.bone-grafting');
     }
 
     public function cosmetic(): View
     {
-        $category = TreatmentCategory::where('slug', 'cosmetic-dentistry')->with('treatments')->first();
-        return view('pages.treatments.cosmetic-dentistry', compact('category'));
+        return view('pages.treatments.cosmetic-dentistry');
     }
 
     public function general(): View
     {
-        $category = TreatmentCategory::where('slug', 'general-dentistry')->with('treatments')->first();
-        return view('pages.treatments.general-dentistry', compact('category'));
+        return view('pages.treatments.general-dentistry');
     }
 }

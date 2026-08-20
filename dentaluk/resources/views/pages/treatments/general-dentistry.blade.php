@@ -29,22 +29,4 @@
             </div>
         </div>
     </section>
-
-    <section class="section-padding" id="details">
-        <div class="container custom-container">
-            <div class="row g-4 justify-content-center mb-5">
-                @if(isset($category) && $category->treatments)
-                @foreach($category->treatments->where('is_published', true) as $treatment)
-                <div class="col-md-6 col-lg-3" id="treatment-{{ $treatment->id }}">
-                    <div class="why-choose-card text-center p-4">
-                        <i class="{{ $treatment->icon_class }} mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>{{ $treatment->name }}</h3>
-                        <p>{{ $treatment->short_desc }}</p>
-                    </div>
-                </div>
-                @endforeach
-                @endif
-            </div>
-        </div>
-    </section>
 </x-app-layout>

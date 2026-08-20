@@ -32,18 +32,52 @@
 
     <section class="section-padding">
         <div class="container custom-container">
-                        <div class="row g-4 justify-content-center mb-5">
-                @if(isset($category) && $category->treatments)
-                @foreach($category->treatments->where('is_published', true) as $treatment)
-                <div class="col-md-6 col-lg-3" id="treatment-{{ $treatment->id }}">
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-md-4" id="implants">
                     <div class="why-choose-card text-center p-4">
-                        <i class="{{ $treatment->icon_class }} mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>{{ $treatment->name }}</h3>
-                        <p>{{ $treatment->short_desc }}</p>
+                        <i class="fa-solid fa-screwdriver-wrench mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Dental Implants</h3>
+                        <p>Titanium posts anchored into the jawbone serving as permanent roots to support realistic crowns.</p>
                     </div>
                 </div>
-                @endforeach
-                @endif
+                <div class="col-md-4" id="dentures">
+                    <div class="why-choose-card text-center p-4">
+                        <i class="fa-solid fa-tooth mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Complete & Partial Dentures</h3>
+                        <p>Comfortable, custom-made removable appliances designed to fit snugly and restore your smile.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" id="full-reconstruction">
+                    <div class="why-choose-card text-center p-4">
+                        <i class="fa-solid fa-wand-magic-sparkles mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Full Smile Restoration</h3>
+                        <p>Comprehensive rehabilitation combining implants, bridges, and ceramic work for total oral renewal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patient Transformations -->
+            <div class="mb-5">
+                <h3 class="text-center mb-4" style="font-family: var(--heading-font); font-size: 36px;">Real Patient Results</h3>
+                <div class="transformation-grid" style="grid-template-columns: 1fr; max-width: 600px; margin: 0 auto;">
+                    <div class="trans-card">
+                        <div class="trans-img-container">
+                            <div class="trans-img-half">
+                                <img src="{{ asset('assets/images/replace-before.jpeg') }}" alt="Before Dental Implants">
+                                <span class="trans-badge">Before</span>
+                            </div>
+                            <div class="trans-img-half">
+                                <img src="{{ asset('assets/images/replace-after.jpeg') }}" alt="After Dental Implants">
+                                <span class="trans-badge">After</span>
+                            </div>
+                        </div>
+                        <div class="trans-content">
+                            <div class="trans-category">DENTAL IMPLANTS</div>
+                            <h3 class="trans-title">A Complete Transformation</h3>
+                            <p class="trans-desc">Missing teeth were replaced with permanent dental implants, restoring full biting function and natural aesthetics.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="cta-banner mt-5">
