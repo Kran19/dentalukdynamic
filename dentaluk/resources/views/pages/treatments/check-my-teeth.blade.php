@@ -26,7 +26,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="hero-image-wrapper mt-4 mt-lg-0" style="border-radius: 20px; overflow: hidden; border: 1px solid rgba(177,152,111,0.25);">
-                        <img src="{{ asset('assets/images/checkmyteeth.png') }}" alt="Dental Examination" style="width: 100%;">
+                        <img src="{{ asset('assets/images/general.png') }}" alt="Dental Examination" style="width: 100%;">
                     </div>
                 </div>
             </div>
@@ -37,15 +37,34 @@
     <section class="section-padding" id="details">
         <div class="container custom-container">
             <div class="row g-4 justify-content-center mb-5">
-                @foreach($category->treatments->where('is_published', true) as $treatment)
-                <div class="col-md-6 col-lg-3" id="treatment-{{ $treatment->id }}">
+                <div class="col-md-6 col-lg-3" id="checkup">
                     <div class="why-choose-card text-center p-4">
-                        <i class="{{ $treatment->icon_class }} mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
-                        <h3>{{ $treatment->name }}</h3>
-                        <p>{{ $treatment->short_desc }}</p>
+                        <i class="fa-solid fa-clipboard-check mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Dental Check-up</h3>
+                        <p>Comprehensive clinical assessment of teeth, gums, jaw joints, and oral soft tissues.</p>
                     </div>
                 </div>
-                @endforeach
+                <div class="col-md-6 col-lg-3" id="hygiene">
+                    <div class="why-choose-card text-center p-4">
+                        <i class="fa-solid fa-hands-bubbles mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Hygiene & Cleanings</h3>
+                        <p>Professional scale and polish treatments to remove stubborn plaque, tartar, and surface stains.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" id="gum-health">
+                    <div class="why-choose-card text-center p-4">
+                        <i class="fa-solid fa-shield-halved mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Gum Health Care</h3>
+                        <p>Preventive therapies to treat gingivitis and manage periodontal conditions effectively.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" id="emergency">
+                    <div class="why-choose-card text-center p-4">
+                        <i class="fa-solid fa-truck-medical mb-3" style="font-size: 32px; color: var(--primary-blue);"></i>
+                        <h3>Emergency Dentistry</h3>
+                        <p>Prompt relief for dental pain, toothaches, swelling, and unexpected dental trauma.</p>
+                    </div>
+                </div>
             </div>
 
             <!-- Patient Transformations -->
